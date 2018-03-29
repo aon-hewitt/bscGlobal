@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Benefits Connect Admin</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link href="css/custom.css" rel="stylesheet" type="text/css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script src="js/gitana.min.js" type="text/javascript"></script>
+    <!--<script type="text/javascript" src="_lib/gitana/gitana.min.js"></script>-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.0/handlebars.js"></script>
+    <link type="text/css" href="https://code.cloudcms.com/alpaca/1.5.17/bootstrap/alpaca.min.css"
+        rel="stylesheet" />
+    <script type="text/javascript" src="https://code.cloudcms.com/alpaca/1.5.17/bootstrap/alpaca.min.js"></script>
+    <script src="ckeditorFull/ckeditor.js" type="text/javascript"></script>
+    <style>
+        .alpaca-container-item
+        {
+            background-color: #eeeeee;
+        }
+        
+        .alpaca-field-object
+        {
+            border: 2px solid black;
+        }
+        
+        .alpaca-container-label
+        {
+            background-color: #dddddd;
+        }
+        
+        .alpaca-field-array
+        {
+            background-color: #828282;
+        }
+        
+        #logout
+        {
+            color: Blue;
+        }
+         #cpy_element {
+            display:none;
+        }
+        textarea#lnk,textarea#lnk1 {
+            width: 30em;
+            height: 7em;
+        }
+    </style>
+    <link href="css/jquery-ui.css" rel="stylesheet" type="text/css" />
+    <script src="js/jquery-ui.min.js" type="text/javascript"></script>
+    <!-- clickjacking script-->
+    <style>
+        html
+        {
+            display: none;
+        }
+    </style>
+    <script>
+        if (self == top) {
+            console.log("Clickjacking test passed");
+            document.documentElement.style.display = 'block';
+        } else {
+            console.log("Clickjacking test failed");
+            top.location = self.location;
+        }
+
+    </script>
+</head>
+<body onload="checkCookie()">
+    <div class="container-fluid" style="background-color: #00467f; height: 91px">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12">
+                    <img src="images/benefitsConnect.png" alt="Image" style="margin-top: 33px">
+                    <img src="images/bostonScientific.png" style="float: right; margin: 20px 50px" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <p id="logout" onclick="logout()" style="cursor: pointer">
+        logout</p>
+    <div id="loginContainer">
+    </div>
+
+    <div class="container landingpage">
+         <div id="loc">
+            <select id="location">
+                <option value="na">North America</option>
+                <option value="apac">APAC</option>
+                <option value="latam">Latin America</option>
+                <option value="emea">Europe</option>
+            </select>      
+            <div class="">
+                <button id="selectionSubmit" type="button" name="selectionSubmit" onclick="county()"> Submit</button>
+            </div>
+        </div>
+        <div id="cntry">
+            <h2>Please Select Country </h2>
+             <div id="countryNA" style="display: none">
+                <select id="nac">
+                    <option value="us">United States</option>
+                    <option value="canada">Canada</option>
+                    <option value="pr">Puerto Rico</option>                
+                </select>
+                <button id="selectionCountry" type="button" name="selectionSubmit" onclick="countyNA()"> Submit</button>
+            </div>    
+            <div id="countryAPAC" style="display: none">
+                <select id="apac">
+                    <option value="australia">Australia</option>
+                    <option value="chinaE">China English</option>
+                    <option value="chinaL">China Local Language</option>                
+                    <option value="hongkong">HongKong</option>
+                    <option value="india">India</option>
+                    <option value="indonesiaE">Indonesia English</option>
+                    <option value="indonesiaL">Indonesia Local Language</option>
+                    <option value="japan">Japan</option>
+                    <option value="malasiaP">Malasia Penag</option>
+                    <option value="malasiaS">Malasia Sales</option>                
+                    <option value="newzeland">NewZeland</option>
+                    <option value="phillipines">Phillipines</option>
+                    <option value="singapore">Singapore</option>                
+                    <option value="korea">Korea</option>
+                    <option value="taiwan">Taiwan</option>
+                    <option value="thailandE">Thailand English</option>                
+                    <option value="thailandL">Thailand Local Language</option>
+                    <option value="vietnamE">Vietnam English</option>                
+                    <option value="vietnamE">Vietnam Local Language</option>
+                </select>
+                 <button id="selectionCountry" type="button" name="selectionSubmit" onclick="countyApac()"> Submit</button>
+            </div> 
+            <div id="countryEurope" style="display: none">
+                <select id="europe">
+                    <option value="austria">Austria</option>
+                    <option value="belgium">Belgium</option>
+                    <option value="czechRepub">Czech Republic</option>                
+                    <option value="france">France</option>
+                    <option value="germany">Germany</option>
+                    <option value="greece">Greece</option>
+                    <option value="italy">Italy</option>
+                    <option value="lebanon">Lebanon</option>
+                    <option value="netherlands">Netherlands</option>
+                    <option value="nordics">Nordics</option>                
+                    <option value="poland">Poland</option>
+                    <option value="portugal">Portugal</option>
+                    <option value="russia">Russia</option>                
+                    <option value="southAfrica">South Africa</option>
+                    <option value="spain">Spain</option>
+                    <option value="switzerland">Switzerland</option>                
+                    <option value="turkey">Turkey</option>
+                    <option value="uae">United Arab Emirates</option>                
+                    <option value="uk">United Kingdom</option>
+                    <option value="ireland">Ireland</option>
+                </select>
+                 <button id="selectionCountry" type="button" name="selectionSubmit" onclick="countyEurope()"> Submit</button>
+            </div> 
+            <div id="countryLatam" style="display: none">
+                <select id="latam">
+                    <option value="costarica">Costa Rica</option>
+                    <option value="la">Latin America</option>                
+                </select>
+                 <button id="selectionCountry" type="button" name="selectionSubmit" onclick="countyLatam()"> Submit</button>
+            </div>  
+        </div>
+    </div>
+
+ 
+
+
+    <br>
+    <footer class="container-fluid text-center landingfooter">
+      <p>2018 Alight Solutions</p>
+    </footer>
+
+    <script src="js/alpaca2.js"></script>
+    <script src="js/Class.create.js" type="text/javascript"></script>
+    <script src="js/jquery-encoder-0.1.0.js" type="text/javascript"></script>
+    
+</body>
+</html>

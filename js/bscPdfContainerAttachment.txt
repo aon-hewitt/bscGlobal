@@ -1,0 +1,15 @@
+{
+    "title": "pdfContainer",
+    "type": "object",
+    "properties": {
+        "name": {
+            "type": "string",
+            "title": "name",
+            "readonly": false,
+            "required": false,
+            "disallow": []
+        }
+    },
+    "_parent": "n:node",
+    "items": {}
+}
