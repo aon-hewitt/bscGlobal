@@ -189,14 +189,15 @@ function getPage(callback) {
     //            "baseURL": "/proxy"
     //                    }
 
+
     var config = {
-        "clientKey": "493dfacc-b834-436b-ac02-404ac37ce3e0",
-        "clientSecret": "RJyykiPGmXk0c2fcZr2B4DJ1cehhJyTEGG6KOX//RDany80M3zgtXzkStwG2BjIPxb2a6K/0IpoFcEKEny4hybaV3ea3pR1JgBgFuULSjPQ=",
-        "username": "32e83faa-a9ee-49cb-842b-667e8b8e4cb6", 
-        "password": "7RHaFWKIQ8RPQ133H0IXo8DrCw7f/4AwuGFIhpmzvoDmad80M4hvPKciqOHFN9lYsSTtqmF6d1C3ZqaIldU6rxyhXIReXskwozvoFcPkBqg=", 
-        "baseURL": "https://api.cloudcms.com",
-        "application": "d1ce1d26e86ea535be42"
-    }
+        "client Key":"5656f503-5720-47d4-8453-19284c317e9c",
+        "client Secret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+        "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+        "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+         "baseURL": "https://api.cloudcms.com",
+        "application": "3be07fd41b525b0601ae"
+        }
 
 
     $("#dialog").dialog("close");
@@ -643,13 +644,13 @@ function reShowForm(pageIdToLoad) {
     setTimer();
     console.log("Timer Set");
     var config = {
-        "clientKey": "493dfacc-b834-436b-ac02-404ac37ce3e0",
-        "clientSecret": "RJyykiPGmXk0c2fcZr2B4DJ1cehhJyTEGG6KOX//RDany80M3zgtXzkStwG2BjIPxb2a6K/0IpoFcEKEny4hybaV3ea3pR1JgBgFuULSjPQ=",
-        "username": "32e83faa-a9ee-49cb-842b-667e8b8e4cb6", 
-        "password": "7RHaFWKIQ8RPQ133H0IXo8DrCw7f/4AwuGFIhpmzvoDmad80M4hvPKciqOHFN9lYsSTtqmF6d1C3ZqaIldU6rxyhXIReXskwozvoFcPkBqg=", 
-        "baseURL": "https://api.cloudcms.com",
-        "application": "d1ce1d26e86ea535be42"
-    }
+"client Key":"5656f503-5720-47d4-8453-19284c317e9c",
+"client Secret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+ "baseURL": "https://api.cloudcms.com",
+"application": "3be07fd41b525b0601ae"
+}
     $("#dialog").dialog("close");
 
     Gitana.connect(config, function(err) {
@@ -981,13 +982,13 @@ function showFormRedirect(pageIdToLoad) {
     setTimer();
     console.log("Timer Set");
     var config = {
-        "clientKey": "493dfacc-b834-436b-ac02-404ac37ce3e0",
-        "clientSecret": "RJyykiPGmXk0c2fcZr2B4DJ1cehhJyTEGG6KOX//RDany80M3zgtXzkStwG2BjIPxb2a6K/0IpoFcEKEny4hybaV3ea3pR1JgBgFuULSjPQ=",
-        "username": "32e83faa-a9ee-49cb-842b-667e8b8e4cb6", 
-        "password": "7RHaFWKIQ8RPQ133H0IXo8DrCw7f/4AwuGFIhpmzvoDmad80M4hvPKciqOHFN9lYsSTtqmF6d1C3ZqaIldU6rxyhXIReXskwozvoFcPkBqg=", 
-        "baseURL": "https://api.cloudcms.com",
-        "application": "d1ce1d26e86ea535be42"
-    } 
+"client Key":"5656f503-5720-47d4-8453-19284c317e9c",
+"client Secret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+ "baseURL": "https://api.cloudcms.com",
+"application": "3be07fd41b525b0601ae"
+} 
     $("#dialog").dialog("close");
 
     Gitana.connect(config, function(err) {
@@ -1121,13 +1122,13 @@ function showFormMicro(pageIdToLoad) {
     setTimer();
     console.log("Timer Set");
     var config = {
-        "clientKey": "493dfacc-b834-436b-ac02-404ac37ce3e0",
-        "clientSecret": "RJyykiPGmXk0c2fcZr2B4DJ1cehhJyTEGG6KOX//RDany80M3zgtXzkStwG2BjIPxb2a6K/0IpoFcEKEny4hybaV3ea3pR1JgBgFuULSjPQ=",
-        "username": "32e83faa-a9ee-49cb-842b-667e8b8e4cb6", 
-        "password": "7RHaFWKIQ8RPQ133H0IXo8DrCw7f/4AwuGFIhpmzvoDmad80M4hvPKciqOHFN9lYsSTtqmF6d1C3ZqaIldU6rxyhXIReXskwozvoFcPkBqg=", 
-        "baseURL": "https://api.cloudcms.com",
-        "application": "d1ce1d26e86ea535be42"
-    }
+"client Key":"5656f503-5720-47d4-8453-19284c317e9c",
+"client Secret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+ "baseURL": "https://api.cloudcms.com",
+"application": "3be07fd41b525b0601ae"
+}
 
 
     $("#dialog").dialog("close");
@@ -1321,13 +1322,13 @@ function showFormImageTop(pageIdToLoad) {
     setTimer();
     console.log("Timer Set");
     var config = {
-        "clientKey": "493dfacc-b834-436b-ac02-404ac37ce3e0",
-        "clientSecret": "RJyykiPGmXk0c2fcZr2B4DJ1cehhJyTEGG6KOX//RDany80M3zgtXzkStwG2BjIPxb2a6K/0IpoFcEKEny4hybaV3ea3pR1JgBgFuULSjPQ=",
-        "username": "32e83faa-a9ee-49cb-842b-667e8b8e4cb6", 
-        "password": "7RHaFWKIQ8RPQ133H0IXo8DrCw7f/4AwuGFIhpmzvoDmad80M4hvPKciqOHFN9lYsSTtqmF6d1C3ZqaIldU6rxyhXIReXskwozvoFcPkBqg=", 
-        "baseURL": "https://api.cloudcms.com",
-        "application": "d1ce1d26e86ea535be42"
-    }
+"client Key":"5656f503-5720-47d4-8453-19284c317e9c",
+"client Secret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+ "baseURL": "https://api.cloudcms.com",
+"application": "3be07fd41b525b0601ae"
+}
 
 
     $("#dialog").dialog("close");
@@ -1446,13 +1447,13 @@ function showFormLatamHome(pageIdToLoad) {
     setTimer();
     console.log("Timer Set");
     var config = {
-        "clientKey": "493dfacc-b834-436b-ac02-404ac37ce3e0",
-        "clientSecret": "RJyykiPGmXk0c2fcZr2B4DJ1cehhJyTEGG6KOX//RDany80M3zgtXzkStwG2BjIPxb2a6K/0IpoFcEKEny4hybaV3ea3pR1JgBgFuULSjPQ=",
-        "username": "32e83faa-a9ee-49cb-842b-667e8b8e4cb6", 
-        "password": "7RHaFWKIQ8RPQ133H0IXo8DrCw7f/4AwuGFIhpmzvoDmad80M4hvPKciqOHFN9lYsSTtqmF6d1C3ZqaIldU6rxyhXIReXskwozvoFcPkBqg=", 
-        "baseURL": "https://api.cloudcms.com",
-        "application": "d1ce1d26e86ea535be42"
-    }
+"client Key":"5656f503-5720-47d4-8453-19284c317e9c",
+"client Secret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+ "baseURL": "https://api.cloudcms.com",
+"application": "3be07fd41b525b0601ae"
+}
 
 
     $("#dialog").dialog("close");
@@ -1702,13 +1703,13 @@ function showFormRowImg(pageIdToLoad) {
     setTimer();
     console.log("Timer Set");
     var config = {
-        "clientKey": "493dfacc-b834-436b-ac02-404ac37ce3e0",
-        "clientSecret": "RJyykiPGmXk0c2fcZr2B4DJ1cehhJyTEGG6KOX//RDany80M3zgtXzkStwG2BjIPxb2a6K/0IpoFcEKEny4hybaV3ea3pR1JgBgFuULSjPQ=",
-        "username": "32e83faa-a9ee-49cb-842b-667e8b8e4cb6", 
-        "password": "7RHaFWKIQ8RPQ133H0IXo8DrCw7f/4AwuGFIhpmzvoDmad80M4hvPKciqOHFN9lYsSTtqmF6d1C3ZqaIldU6rxyhXIReXskwozvoFcPkBqg=", 
-        "baseURL": "https://api.cloudcms.com",
-        "application": "d1ce1d26e86ea535be42"
-    }
+"client Key":"5656f503-5720-47d4-8453-19284c317e9c",
+"client Secret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+ "baseURL": "https://api.cloudcms.com",
+"application": "3be07fd41b525b0601ae"
+}
 
 
     $("#dialog").dialog("close");
@@ -1963,13 +1964,13 @@ function showFormIreland(pageIdToLoad) {
     setTimer();
     console.log("Timer Set");
     var config = {
-        "clientKey": "493dfacc-b834-436b-ac02-404ac37ce3e0",
-        "clientSecret": "RJyykiPGmXk0c2fcZr2B4DJ1cehhJyTEGG6KOX//RDany80M3zgtXzkStwG2BjIPxb2a6K/0IpoFcEKEny4hybaV3ea3pR1JgBgFuULSjPQ=",
-        "username": "32e83faa-a9ee-49cb-842b-667e8b8e4cb6", 
-        "password": "7RHaFWKIQ8RPQ133H0IXo8DrCw7f/4AwuGFIhpmzvoDmad80M4hvPKciqOHFN9lYsSTtqmF6d1C3ZqaIldU6rxyhXIReXskwozvoFcPkBqg=", 
-        "baseURL": "https://api.cloudcms.com",
-        "application": "d1ce1d26e86ea535be42"
-    }
+"client Key":"5656f503-5720-47d4-8453-19284c317e9c",
+"client Secret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+ "baseURL": "https://api.cloudcms.com",
+"application": "3be07fd41b525b0601ae"
+}
 
 
     $("#dialog").dialog("close");
@@ -2084,13 +2085,13 @@ function showFormNA() {
     setTimer();
     console.log("Timer Set");
     var config = {
-        "clientKey": "493dfacc-b834-436b-ac02-404ac37ce3e0",
-        "clientSecret": "RJyykiPGmXk0c2fcZr2B4DJ1cehhJyTEGG6KOX//RDany80M3zgtXzkStwG2BjIPxb2a6K/0IpoFcEKEny4hybaV3ea3pR1JgBgFuULSjPQ=",
-        "username": "32e83faa-a9ee-49cb-842b-667e8b8e4cb6", 
-        "password": "7RHaFWKIQ8RPQ133H0IXo8DrCw7f/4AwuGFIhpmzvoDmad80M4hvPKciqOHFN9lYsSTtqmF6d1C3ZqaIldU6rxyhXIReXskwozvoFcPkBqg=", 
-        "baseURL": "https://api.cloudcms.com",
-        "application": "d1ce1d26e86ea535be42"
-    }
+"client Key":"5656f503-5720-47d4-8453-19284c317e9c",
+"client Secret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+ "baseURL": "https://api.cloudcms.com",
+"application": "3be07fd41b525b0601ae"
+}
 
 
     $("#dialog").dialog("close");
@@ -2361,13 +2362,13 @@ function showResourcesForm(){
     setTimer();
     console.log("Timer Set");
     var config = {
-        "clientKey": "493dfacc-b834-436b-ac02-404ac37ce3e0",
-        "clientSecret": "RJyykiPGmXk0c2fcZr2B4DJ1cehhJyTEGG6KOX//RDany80M3zgtXzkStwG2BjIPxb2a6K/0IpoFcEKEny4hybaV3ea3pR1JgBgFuULSjPQ=",
-        "username": "32e83faa-a9ee-49cb-842b-667e8b8e4cb6", 
-        "password": "7RHaFWKIQ8RPQ133H0IXo8DrCw7f/4AwuGFIhpmzvoDmad80M4hvPKciqOHFN9lYsSTtqmF6d1C3ZqaIldU6rxyhXIReXskwozvoFcPkBqg=", 
-        "baseURL": "https://api.cloudcms.com",
-        "application": "d1ce1d26e86ea535be42"
-    }
+"client Key":"5656f503-5720-47d4-8453-19284c317e9c",
+"client Secret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+ "baseURL": "https://api.cloudcms.com",
+"application": "3be07fd41b525b0601ae"
+}
 
 
     $("#dialog").dialog("close");
