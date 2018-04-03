@@ -188,11 +188,10 @@ function getPage(callback) {
     //            "password": password,
     //            "baseURL": "/proxy"
     //                    }
-
-
+ 
     var config = {
-        "client Key":"5656f503-5720-47d4-8453-19284c317e9c",
-        "client Secret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+        "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+        "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",        
         "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
         "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
          "baseURL": "https://api.cloudcms.com",
@@ -644,8 +643,8 @@ function reShowForm(pageIdToLoad) {
     setTimer();
     console.log("Timer Set");
     var config = {
-"client Key":"5656f503-5720-47d4-8453-19284c317e9c",
-"client Secret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+"clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+"clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
 "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
 "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
  "baseURL": "https://api.cloudcms.com",
@@ -982,8 +981,8 @@ function showFormRedirect(pageIdToLoad) {
     setTimer();
     console.log("Timer Set");
     var config = {
-"client Key":"5656f503-5720-47d4-8453-19284c317e9c",
-"client Secret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+"clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+"clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
 "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
 "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
  "baseURL": "https://api.cloudcms.com",
@@ -1122,8 +1121,8 @@ function showFormMicro(pageIdToLoad) {
     setTimer();
     console.log("Timer Set");
     var config = {
-"client Key":"5656f503-5720-47d4-8453-19284c317e9c",
-"client Secret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+"clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+"clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
 "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
 "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
  "baseURL": "https://api.cloudcms.com",
@@ -1322,8 +1321,8 @@ function showFormImageTop(pageIdToLoad) {
     setTimer();
     console.log("Timer Set");
     var config = {
-"client Key":"5656f503-5720-47d4-8453-19284c317e9c",
-"client Secret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+"clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+"clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
 "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
 "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
  "baseURL": "https://api.cloudcms.com",
@@ -1447,8 +1446,8 @@ function showFormLatamHome(pageIdToLoad) {
     setTimer();
     console.log("Timer Set");
     var config = {
-"client Key":"5656f503-5720-47d4-8453-19284c317e9c",
-"client Secret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+"clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+"clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
 "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
 "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
  "baseURL": "https://api.cloudcms.com",
@@ -1703,8 +1702,8 @@ function showFormRowImg(pageIdToLoad) {
     setTimer();
     console.log("Timer Set");
     var config = {
-"client Key":"5656f503-5720-47d4-8453-19284c317e9c",
-"client Secret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+"clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+"clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
 "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
 "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
  "baseURL": "https://api.cloudcms.com",
@@ -1964,8 +1963,8 @@ function showFormIreland(pageIdToLoad) {
     setTimer();
     console.log("Timer Set");
     var config = {
-"client Key":"5656f503-5720-47d4-8453-19284c317e9c",
-"client Secret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+"clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+"clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
 "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
 "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
  "baseURL": "https://api.cloudcms.com",
@@ -2085,8 +2084,8 @@ function showFormNA() {
     setTimer();
     console.log("Timer Set");
     var config = {
-"client Key":"5656f503-5720-47d4-8453-19284c317e9c",
-"client Secret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+"clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+"clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
 "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
 "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
  "baseURL": "https://api.cloudcms.com",
@@ -2362,8 +2361,8 @@ function showResourcesForm(){
     setTimer();
     console.log("Timer Set");
     var config = {
-"client Key":"5656f503-5720-47d4-8453-19284c317e9c",
-"client Secret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+"clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+"clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
 "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
 "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
  "baseURL": "https://api.cloudcms.com",
@@ -2747,7 +2746,7 @@ function showMFForm(pageIdToLoad) {
 //Apac Uploads
 
 function submitFormApac() {
-    var pdfContainerId = 'f2585ff41013540945ab';
+    var pdfContainerId = 'adffb141d0c8f2d2b0b8';
     var formData = new FormData($("#frmeditSubmitFormApac")[0]);
 
     var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
@@ -2763,17 +2762,95 @@ function submitFormApac() {
             authorization: authorizationHeader
         },
         success: function (response) {
-          /*  //success process here
+        /*  //success process here
             var txt = $("#uploadFilenameEdit5").val();
             $("#lnk").html('https://f2472b6e-e1f1-4c52-9eed-f7797ff8e908-hosted.cloudcms.net/static/test.pdf?repository=e083f23fc5141afe5d22&branch=fcf1c3fb882fd40ecf97&node=f2585ff41013540945ab&attachment=' + txt);
             $("#cpy_element").css('display', 'block');
-*/
+        */
         }
     });
 }
 
 
 
+function submitFormEmea() {
+    var pdfContainerId = '9f99c7dac34354d0d7a3';
+    var formData = new FormData($("#frmeditSubmitFormEmea")[0]);
+
+    var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
+    var form = $("#frmeditSubmitFormEmea");
+
+    $.ajax({
+        type: "POST",
+        url: "https://api.cloudcms.com/repositories/" + repositoryId + "/branches/" + branchId + "/nodes/" + pdfContainerId + "/attachments/" + ($("#uploadFilenameEditApac").val()).replace(" ", "_") + "/",
+        data: formData,
+        contentType: false,
+        processData: false,
+        headers: {
+            authorization: authorizationHeader
+        },
+        success: function (response) {
+        /*  //success process here
+            var txt = $("#uploadFilenameEdit5").val();
+            $("#lnk").html('https://f2472b6e-e1f1-4c52-9eed-f7797ff8e908-hosted.cloudcms.net/static/test.pdf?repository=e083f23fc5141afe5d22&branch=fcf1c3fb882fd40ecf97&node=f2585ff41013540945ab&attachment=' + txt);
+            $("#cpy_element").css('display', 'block');
+        */
+        }
+    });
+}
+
+
+function submitFormLatam() {
+    var pdfContainerId = 'f81ca80ee19347464f12';
+    var formData = new FormData($("#frmeditSubmitFormLatam")[0]);
+
+    var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
+    var form = $("#frmeditSubmitFormLatam");
+
+    $.ajax({
+        type: "POST",
+        url: "https://api.cloudcms.com/repositories/" + repositoryId + "/branches/" + branchId + "/nodes/" + pdfContainerId + "/attachments/" + ($("#uploadFilenameEditApac").val()).replace(" ", "_") + "/",
+        data: formData,
+        contentType: false,
+        processData: false,
+        headers: {
+            authorization: authorizationHeader
+        },
+        success: function (response) {
+        /*  //success process here
+            var txt = $("#uploadFilenameEdit5").val();
+            $("#lnk").html('https://f2472b6e-e1f1-4c52-9eed-f7797ff8e908-hosted.cloudcms.net/static/test.pdf?repository=e083f23fc5141afe5d22&branch=fcf1c3fb882fd40ecf97&node=f2585ff41013540945ab&attachment=' + txt);
+            $("#cpy_element").css('display', 'block');
+        */
+        }
+    });
+}
+
+function submitFormNa() {
+    var pdfContainerId = 'd427de3db01e378f64fb';
+    var formData = new FormData($("#frmeditSubmitFormLatam")[0]);
+
+    var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
+    var form = $("#frmeditSubmitFormLatam");
+
+    $.ajax({
+        type: "POST",
+        url: "https://api.cloudcms.com/repositories/" + repositoryId + "/branches/" + branchId + "/nodes/" + pdfContainerId + "/attachments/" + ($("#uploadFilenameEditApac").val()).replace(" ", "_") + "/",
+        data: formData,
+        contentType: false,
+        processData: false,
+        headers: {
+            authorization: authorizationHeader
+        },
+        success: function (response) {
+        /*  //success process here
+            var txt = $("#uploadFilenameEdit5").val();
+            $("#lnk").html('https://f2472b6e-e1f1-4c52-9eed-f7797ff8e908-hosted.cloudcms.net/static/test.pdf?repository=e083f23fc5141afe5d22&branch=fcf1c3fb882fd40ecf97&node=f2585ff41013540945ab&attachment=' + txt);
+            $("#cpy_element").css('display', 'block');
+        */
+        }
+    });
+}
 
 //This is form upload scripting here--------------------------------------------
 
@@ -2795,11 +2872,11 @@ function submitForm() {
             authorization: authorizationHeader
         },
         success: function (response) {
-          /*  //success process here
+        /*  //success process here
             var txt = $("#uploadFilenameEdit5").val();
             $("#lnk").html('https://f2472b6e-e1f1-4c52-9eed-f7797ff8e908-hosted.cloudcms.net/static/test.pdf?repository=e083f23fc5141afe5d22&branch=fcf1c3fb882fd40ecf97&node=f2585ff41013540945ab&attachment=' + txt);
             $("#cpy_element").css('display', 'block');
-*/
+        */
         }
     });
 }

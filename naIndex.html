@@ -121,25 +121,25 @@
             </div>
             <div id="menu1" class="tab-pane fade">
               
-                <form action="" method="post" enctype="multipart/form-data" name="frmeditSubmitForm5"
-                id="frmeditSubmitForm5">
+                <form action="" method="post" enctype="multipart/form-data" name="frmeditSubmitFormNa"
+                id="frmeditSubmitFormNa">
                 <div>
                     <br />
-                    <label for="myFileUpload5">
+                    <label for="myFileUploadNa">
                         You may use this form to upload pdf (Adobe Acrobat) , xls/xlsx (Microsoft Excel) or ppt/pptx (Microsoft Powerpoint)
                         resources to your document library. Select the file by clicking on the 'Choose File'
                         Button. Give the file a user friendly name. It should be lowercase with no spaces.
                         Then click 'Submit' to upload your file to the library.
                     </label>
                     <br />
-                    <input type="file" id="myFileUpload5" accept="application/pdf,application/vnd.ms-excel"
-                        name="myFileUpload5">
+                    <input type="file" id="myFileUploadNa" accept="application/pdf,application/vnd.ms-excel"
+                        name="myFileUploadNa">
                     <br />
                     <label>
                         Give a name to your file (lowercase, no spaces ex: <span style="background-color: Yellow">
                             my_new_file</span>).
                         <br />
-                        <input type="text" name="uploadFilename5" id="uploadFilenameEdit5">
+                        <input type="text" name="uploadFilenameNa" id="uploadFilenameEditNa">
                         <br />
                         <br />
                       
@@ -147,7 +147,7 @@
                         <br>
                     </label>
                      <p id="p1" style="display:none">
-                             https://f2472b6e-e1f1-4c52-9eed-f7797ff8e908-hosted.cloudcms.net/static/test.pdf?repository=e083f23fc5141afe5d22&branch=fcf1c3fb882fd40ecf97&node=f2585ff41013540945ab&attachment=<span id="Span1"></span> 
+                        https://3abed68c-41f8-43a1-a7a0-f80ccbb1ded4-hosted.cloudcms.net/static/test.pdf?repository=5806d444c717deabe6fc&branch=956f6d1d79eef20c2b37&node=d427de3db01e378f64fb&attachment=<span id="Span1"></span> 
                          </p>
                 </div>
                 <div>
@@ -170,10 +170,10 @@
                      <input type="hidden" name="_dontcare">
                 </form>
                 <script>
-                    $("#frmeditSubmitForm5").submit(function (event) {
+                    $("#frmeditSubmitFormNa").submit(function (event) {
                         alert('Resource Uploaded');
                         event.preventDefault(); // Prevent the form from submitting via the browser.
-                        submitForm();
+                        submitFormNa();
                     });
 
                 </script>
