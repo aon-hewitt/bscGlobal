@@ -298,6 +298,7 @@ function loadEmea(){
         $("#alpaca1").html("");
         
         $("#alpaca1").append('<option value="">None</option>');
+        $("#alpaca1").append('<option value="7b689138ab90cead164d">Home</option>');
         $("#alpaca1").append('<option value="636c4e2aec37838ad7fe">Private Health Scheme</option>');
         $("#alpaca1").append('<option value="3883782f1e5b59a9bb4c">Wellness</option>');
         $("#alpaca1").append('<option value="6d3e886ca223c4e91cda">Pension Plan</option>');
@@ -325,6 +326,7 @@ function loadEmea(){
     }else  if(cntr == "france"){        
         $("#alpaca1").html("");        
         $("#alpaca1").append('<option value="">None</option>');
+        $("#alpaca1").append('<option value="49bab5b49108fdd445e5">Home</option>');
         $("#alpaca1").append('<option value="e96df5f3fcd73742729d">Private Health Scheme</option>');
         $("#alpaca1").append('<option value="07c525a2891b5ba7a337">Wellness</option>');
         $("#alpaca1").append('<option value="7e1b17d1676572ee554d">Pension Plan</option>');
@@ -351,7 +353,8 @@ function loadEmea(){
        
     }else  if(cntr == "greece"){
         $("#alpaca1").html("");
-        $("#alpaca1").append('<option value="">None</option>');     
+        $("#alpaca1").append('<option value="">None</option>');   
+        $("#alpaca1").append('<option value="374be01f93d8979298fc">Home</option>');  
         $("#alpaca1").append('<option value="4588d303ff66fa7bf107">Private Health Scheme</option>');
         $("#alpaca1").append('<option value="c95e7e79c67369b3f594">Wellness</option>');
         //$("#alpaca1").append('<option value="6d3e886ca223c4e91cda">Pension Plan</option>');
@@ -379,6 +382,7 @@ function loadEmea(){
     }else  if(cntr == "italy"){
         $("#alpaca1").html("");
         $("#alpaca1").append('<option value="">None</option>');    
+        $("#alpaca1").append('<option value="01b6d8b29b0a46fe652e">Home</option>');  
         $("#alpaca1").append('<option value="834c666327a3ddad18aa">Healthcare Scheme</option>');
         $("#alpaca1").append('<option value="55ddec275a541d367765">Wellness</option>');
         $("#alpaca1").append('<option value="000f50035c5540bde1f4">Pension Plan</option>');
@@ -404,6 +408,7 @@ function loadEmea(){
     }else  if(cntr == "nordics"){
         $("#alpaca1").html("");
         $("#alpaca1").append('<option value="">None</option>');
+        $("#alpaca1").append('<option value="47960869f4de84d641fa">Home</option>');  
         $("#alpaca1").append('<option value="c5015827b1d411594818">Healthcare Scheme</option>');
         $("#alpaca1").append('<option value="0e40b39ed3cdea71c612">Vision</option>');
         $("#alpaca1").append('<option value="d7a40fa96de33e5dd130">Wellness</option>');
@@ -430,6 +435,7 @@ function loadEmea(){
     }else  if(cntr == "poland"){
         $("#alpaca1").html("");
         $("#alpaca1").append('<option value="">None</option>');
+        $("#alpaca1").append('<option value="eb81e90413e9a0cddc05">Home</option>');  
         $("#alpaca1").append('<option value="041c0a3f868a40598e82">Healthcare Scheme</option>');
         $("#alpaca1").append('<option value="6e152fe53b9c08b38659">Wellness</option>');
         $("#alpaca1").append('<option value="463104f1691d762472db">Pension Plan</option>');
@@ -455,6 +461,7 @@ function loadEmea(){
     }else  if(cntr == "spain"){
         $("#alpaca1").html("");
         $("#alpaca1").append('<option value="">None</option>');
+        $("#alpaca1").append('<option value="1b2cf220530a7fdeec81">Home</option>');  
         $("#alpaca1").append('<option value="b489171fa53357ff7b83">Healthcare Scheme</option>');
         $("#alpaca1").append('<option value="70bd24fc15f03f7df574">Vision</option>');
         $("#alpaca1").append('<option value="d8d5071ae811a3c1660b">Dental</option>');
@@ -482,6 +489,7 @@ function loadEmea(){
     }else  if(cntr == "uk"){
         $("#alpaca1").html("");
         $("#alpaca1").append('<option value="">None</option>');
+        $("#alpaca1").append('<option value="05aed5b3dd549129a378">Home</option>');  
         $("#alpaca1").append('<option value="b92e6873bf2756ff0089">Healthcare Scheme</option>');
         $("#alpaca1").append('<option value="9141a07a9cb42b9ccf60">Vision</option>');
         $("#alpaca1").append('<option value="51336a72c0da7281f19a">Wellness</option>');
@@ -520,7 +528,7 @@ function loadEmea(){
         });*/
       
         $("#alpaca1").html("");
-
+        $("#alpaca1").append('<option value="">None</option>');
         $("#alpaca1").append('<option value="c9a662c56100215cf8f9">myHealth</option>');
         $("#alpaca1").append('<option value="a2971761da4999ccf154">myWealth</option>');
         $("#alpaca1").append('<option value="e472c46c51228b8b8a18">myLife</option>'); 
@@ -1157,9 +1165,10 @@ function showFormMicro(pageIdToLoad) {
                     if((pageIdToLoad ==  "7946ddfb3c0b391c97b6") || (pageIdToLoad ==  "8e707aeed0449d39c9bb") || (pageIdToLoad ==  "3509cedc84dc108f695e") || (pageIdToLoad ==  "06ebf9f6b50b9123d16a") || (pageIdToLoad ==  "c7c243a91336f42a74c4") || (pageIdToLoad ==  "cfa046a067d11beb92cb") || (pageIdToLoad ==  "a6c28487ce4e0966d531") || (pageIdToLoad ==  "9b435d57d97d8bc83b15") || (pageIdToLoad ==  "d9169a3c36227bcd687b") || (pageIdToLoad ==  "1983821b05719f2cbf44"))
                     {
                         showResourcesForm(pageIdToLoad);
-                    }else if(pageIdToLoad == "9dd6597dc34ee01f2bc2"){ 
-                        
-                    }else{
+                    }else if(pageIdToLoad == "7b689138ab90cead164d" || pageIdToLoad == "49bab5b49108fdd445e5" || pageIdToLoad =='374be01f93d8979298fc' || pageIdToLoad =="01b6d8b29b0a46fe652e" || pageIdToLoad == "47960869f4de84d641fa" || pageIdToLoad=="eb81e90413e9a0cddc05" || pageIdToLoad == "1b2cf220530a7fdeec81" || pageIdToLoad =="05aed5b3dd549129a378"){ 
+                         showHomepageForm(pageIdToLoad)
+                    }
+                    else{
                         showPageMicro();
                     }
                 });
@@ -1702,13 +1711,13 @@ function showFormRowImg(pageIdToLoad) {
     setTimer();
     console.log("Timer Set");
     var config = {
-"clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
-"clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
-"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
-"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
- "baseURL": "https://api.cloudcms.com",
-"application": "3be07fd41b525b0601ae"
-}
+        "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+        "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+        "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+        "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+         "baseURL": "https://api.cloudcms.com",
+        "application": "3be07fd41b525b0601ae"
+        }
 
 
     $("#dialog").dialog("close");
@@ -1963,13 +1972,13 @@ function showFormIreland(pageIdToLoad) {
     setTimer();
     console.log("Timer Set");
     var config = {
-"clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
-"clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
-"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
-"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
- "baseURL": "https://api.cloudcms.com",
-"application": "3be07fd41b525b0601ae"
-}
+        "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+        "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+        "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+        "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+         "baseURL": "https://api.cloudcms.com",
+        "application": "3be07fd41b525b0601ae"
+        }
 
 
     $("#dialog").dialog("close");
@@ -2155,11 +2164,7 @@ function showPageMicro(){
                         "title": "name",
                          "readonly":true
                     },
-                    "title": {
-                        "type": "string",
-                        "title": "title",
-                         "readonly":true
-                    },
+                    
                     "heading": {
                         "type": "string",
                         "title": "heading"
@@ -2233,7 +2238,7 @@ function showPageMicro(){
                             var value = this.getValue();
                             //alert(JSON.stringify(value, null, "  "));
                             node.name = value.name;
-                            node.title = value.title;
+                           
                             node.heading = value.heading;
                             node.body = value.body;
                             node.links = value.links;
@@ -2304,9 +2309,6 @@ function showHomepageForm(pageIdToLoad) {
                     "type": "string",
                     "title": "name",
                     "readonly": true 
-                },"title": {
-                    "type": "string",
-                    "title": "title" 
                 },
                 "tile1": {
                     "type": "string",
@@ -2329,8 +2331,7 @@ function showHomepageForm(pageIdToLoad) {
 
                             var value = this.getValue();
                             //alert(JSON.stringify(value, null, "  "));
-                            node.name = value.name;
-                            node.title = value.title;
+                            node.name = value.name;                          
                             node.tile1 = value.tile1;
                             node.update().then(function () {
                                 alert("Form Submitted")
