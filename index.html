@@ -73,7 +73,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <img src="images/benefitsConnect.png" alt="Image" style="margin-top: 33px">
+                    <a href="index.html"><img src="images/benefitsConnect.png" alt="Image" style="margin-top: 33px"></a>
                     <img src="images/bostonScientific.png" style="float: right; margin: 20px 50px" />
                 </div>
             </div>
@@ -86,27 +86,32 @@
 
     <div class="container landingpage">
          <div id="loc">
+            <h2>Please select region</h2>
             <select id="location">
                 <option value="na">North America</option>
                 <option value="apac">APAC</option>
                 <option value="latam">Latin America</option>
                 <option value="emea">Europe</option>
             </select>      
+            <br/> <br/>
             <div class="">
-                <button id="selectionSubmit" type="button" name="selectionSubmit" onclick="county()"> Submit</button>
+                <button id="selectionSubmit" type="button" name="selectionSubmit" class="btnS" onclick="county()"> Submit</button>
             </div>
         </div>
         <div id="cntry">
-            <h2>Please Select Country </h2>
+           
              <div id="countryNA" style="display: none">
+              <h2>Please Select Country </h2>
                 <select id="nac">
                     <option value="us">United States</option>
                     <option value="canada">Canada</option>
                     <option value="pr">Puerto Rico</option>                
                 </select>
-                <button id="selectionCountry" type="button" name="selectionSubmit" onclick="countyNA()"> Submit</button>
+              
+                <button id="selectionCountry" type="button" name="selectionSubmit" class="btnS"  onclick="countyNA()"> Submit</button>
             </div>    
             <div id="countryAPAC" style="display: none">
+             <h2>Please Select Country </h2>
                 <select id="apac">
                     <option value="australia">Australia</option>
                     <option value="chinaE">China English</option>
@@ -128,9 +133,10 @@
                     <option value="vietnamE">Vietnam English</option>                
                     <option value="vietnamE">Vietnam Local Language</option>
                 </select>
-                 <button id="selectionCountry" type="button" name="selectionSubmit" onclick="countyApac()"> Submit</button>
+                 <button id="selectionCountry" type="button" name="selectionSubmit" class="btnS"  onclick="countyApac()"> Submit</button>
             </div> 
             <div id="countryEurope" style="display: none">
+             <h2>Please Select Country </h2>
                 <select id="europe">
                     <option value="austria">Austria</option>
                     <option value="belgium">Belgium</option>
@@ -153,14 +159,15 @@
                     <option value="uk">United Kingdom</option>
                     <option value="ireland">Ireland</option>
                 </select>
-                 <button id="selectionCountry" type="button" name="selectionSubmit" onclick="countyEurope()"> Submit</button>
+                 <button id="selectionCountry" type="button" name="selectionSubmit" class="btnS"  onclick="countyEurope()"> Submit</button>
             </div> 
             <div id="countryLatam" style="display: none">
+             <h2>Please Select Country </h2>
                 <select id="latam">
                     <option value="costarica">Costa Rica</option>
                     <option value="la">Latin America</option>                
                 </select>
-                 <button id="selectionCountry" type="button" name="selectionSubmit" onclick="countyLatam()"> Submit</button>
+                 <button id="selectionCountry" type="button" name="selectionSubmit" class="btnS"  onclick="countyLatam()"> Submit</button>
             </div>  
         </div>
     </div>

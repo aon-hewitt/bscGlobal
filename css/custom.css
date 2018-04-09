@@ -195,6 +195,14 @@ ul.c-tab_inner li {
     background-color: #F5F5F5;
     padding-bottom: 15px;
 }
+.btnS,.alpaca-form-button.alpaca-form-button-submit.btn.btn-default{
+    padding:5px 15px; 
+    background:#ccc; 
+    border:0 none;
+    cursor:pointer;
+    -webkit-border-radius: 5px;
+    border-radius: 5px; 
+}
 button {
     border: none !important;
     background-color: transparent;
