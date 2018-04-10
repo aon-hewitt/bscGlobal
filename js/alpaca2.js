@@ -2829,7 +2829,7 @@ function submitFormLatam() {
 
 function submitFormNa() {
     var pdfContainerId = 'd427de3db01e378f64fb';
-    var formData = new FormData($("#frmeditSubmitFormLatam")[0]);
+    var formData = new FormData($("#frmeditSubmitFormNa")[0]);
 
     var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
     var form = $("#frmeditSubmitFormLatam");
@@ -2855,7 +2855,7 @@ function submitFormNa() {
 
 //This is form upload scripting here--------------------------------------------
 
-
+/*
 function submitForm() {
     var pdfContainerId = 'f2585ff41013540945ab';
     var formData = new FormData($("#frmeditSubmitForm5")[0]);
@@ -2873,15 +2873,11 @@ function submitForm() {
             authorization: authorizationHeader
         },
         success: function (response) {
-        /*  //success process here
-            var txt = $("#uploadFilenameEdit5").val();
-            $("#lnk").html('https://f2472b6e-e1f1-4c52-9eed-f7797ff8e908-hosted.cloudcms.net/static/test.pdf?repository=e083f23fc5141afe5d22&branch=fcf1c3fb882fd40ecf97&node=f2585ff41013540945ab&attachment=' + txt);
-            $("#cpy_element").css('display', 'block');
-        */
+        
         }
     });
 }
-
+*/
 //This ends form upload scripting-----------------------------------------------
 
 
