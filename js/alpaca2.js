@@ -2760,8 +2760,8 @@ function showMFForm(pageIdToLoad) {
 function submitFormApac() {
     var pdfContainerId = 'adffb141d0c8f2d2b0b8';
     var formData = new FormData($("#frmeditSubmitFormApac")[0]);
-
-    var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
+    var platfrm = sessionStorage.getItem('plat');
+    //var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
     var form = $("#frmeditSubmitFormApac");
 
     $.ajax({
@@ -2771,7 +2771,7 @@ function submitFormApac() {
         contentType: false,
         processData: false,
         headers: {
-            authorization: authorizationHeader
+            authorization: platfrm
         },
         success: function (response) {
         /*  //success process here
@@ -2788,8 +2788,8 @@ function submitFormApac() {
 function submitFormEmea() {
     var pdfContainerId = '9f99c7dac34354d0d7a3';
     var formData = new FormData($("#frmeditSubmitFormEmea")[0]);
-
-    var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
+  var platfrm = sessionStorage.getItem('plat');
+   // var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
     var form = $("#frmeditSubmitFormEmea");
 
     $.ajax({
@@ -2799,7 +2799,7 @@ function submitFormEmea() {
         contentType: false,
         processData: false,
         headers: {
-            authorization: authorizationHeader
+            authorization: platfrm
         },
         success: function (response) {
         /*  //success process here
@@ -2815,8 +2815,8 @@ function submitFormEmea() {
 function submitFormLatam() {
     var pdfContainerId = 'f81ca80ee19347464f12';
     var formData = new FormData($("#frmeditSubmitFormLatam")[0]);
-
-    var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
+  var platfrm = sessionStorage.getItem('plat');
+   // var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
     var form = $("#frmeditSubmitFormLatam");
 
     $.ajax({
@@ -2826,7 +2826,7 @@ function submitFormLatam() {
         contentType: false,
         processData: false,
         headers: {
-            authorization: authorizationHeader
+            authorization: platfrm
         },
         success: function (response) {
         /*  //success process here
