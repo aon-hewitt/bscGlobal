@@ -13,7 +13,7 @@ var dataSource;
 var pageIdToLoad;
 var username;
 var password;
-
+/*
 var apacData={
     "8e9a548f7f3611e0212e":"australia",
     "9fd4de15011f0f131ee8":"chinaE",
@@ -178,7 +178,7 @@ var irelandData={
     "8fb31c12b3e045f6acb1":"GESOP",
     "d9169a3c36227bcd687b":"myResources"
 }
-
+*/
 //Switching from local developement to production will require switching config objects
 
 function getPage(callback) {
@@ -213,6 +213,8 @@ function getPage(callback) {
         }
     }).then(function() {
         platform = this;
+        console.log(platform + '---');
+
         document.cookie = "username=" + username;
         document.cookie = "password=" + password;
          /* add country list based on username/password*/   
@@ -651,13 +653,13 @@ function reShowForm(pageIdToLoad) {
     setTimer();
     console.log("Timer Set");
     var config = {
-"clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
-"clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
-"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
-"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
- "baseURL": "https://api.cloudcms.com",
-"application": "3be07fd41b525b0601ae"
-}
+            "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+            "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+            "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+            "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+             "baseURL": "https://api.cloudcms.com",
+            "application": "3be07fd41b525b0601ae"
+            }
     $("#dialog").dialog("close");
 
     Gitana.connect(config, function(err) {
@@ -672,6 +674,7 @@ function reShowForm(pageIdToLoad) {
         }
     }).then(function() {
         platform = this;
+        console.log('reshow form ' + platform)
         document.cookie = "username=" + username;
         document.cookie = "password=" + password;
          /* add country list based on username/password*/   
@@ -1009,7 +1012,7 @@ function showFormRedirect(pageIdToLoad) {
 
         }
     }).then(function() {
-        platform = this;
+        //platform = this;
         document.cookie = "username=" + username;
         document.cookie = "password=" + password;
          /* add country list based on username/password*/   
@@ -1121,21 +1124,20 @@ function showFormMicro(pageIdToLoad) {
     console.log($("#alpaca1").val() + 'find val');
     
     pageIdToLoad = $("#alpaca1").val(); 
-    
-    console.log('page if' + pageIdToLoad);
+ 
 
     clearTimer();
     console.log("Timer Cleared");
     setTimer();
     console.log("Timer Set");
     var config = {
-"clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
-"clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
-"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
-"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
- "baseURL": "https://api.cloudcms.com",
-"application": "3be07fd41b525b0601ae"
-}
+        "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+        "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+        "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+        "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+         "baseURL": "https://api.cloudcms.com",
+        "application": "3be07fd41b525b0601ae"
+        }
 
 
     $("#dialog").dialog("close");
@@ -1152,6 +1154,9 @@ function showFormMicro(pageIdToLoad) {
         }
     }).then(function() {
         platform = this;
+        console.log(platform + ' in showFormMicro');
+
+
         document.cookie = "username=" + username;
         document.cookie = "password=" + password;
          /* add country list based on username/password*/   
@@ -2783,7 +2788,7 @@ function submitFormEmea() {
 
     $.ajax({
         type: "POST",
-        url: "https://api.cloudcms.com/repositories/" + repositoryId + "/branches/" + branchId + "/nodes/" + pdfContainerId + "/attachments/" + ($("#uploadFilenameEditApac").val()).replace(" ", "_") + "/",
+        url: "https://api.cloudcms.com/repositories/" + repositoryId + "/branches/" + branchId + "/nodes/" + pdfContainerId + "/attachments/" + ($("#uploadFilenameEditEmea").val()).replace(" ", "_") + "/",
         data: formData,
         contentType: false,
         processData: false,
@@ -2810,7 +2815,7 @@ function submitFormLatam() {
 
     $.ajax({
         type: "POST",
-        url: "https://api.cloudcms.com/repositories/" + repositoryId + "/branches/" + branchId + "/nodes/" + pdfContainerId + "/attachments/" + ($("#uploadFilenameEditApac").val()).replace(" ", "_") + "/",
+        url: "https://api.cloudcms.com/repositories/" + repositoryId + "/branches/" + branchId + "/nodes/" + pdfContainerId + "/attachments/" + ($("#uploadFilenameEditLatam").val()).replace(" ", "_") + "/",
         data: formData,
         contentType: false,
         processData: false,
@@ -2827,16 +2832,19 @@ function submitFormLatam() {
     });
 }
 
+
 function submitFormNa() {
+    getPage();
+
     var pdfContainerId = 'd427de3db01e378f64fb';
     var formData = new FormData($("#frmeditSubmitFormNa")[0]);
-
+console.log(platform)
     var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
     var form = $("#frmeditSubmitFormLatam");
 
     $.ajax({
         type: "POST",
-        url: "https://api.cloudcms.com/repositories/" + repositoryId + "/branches/" + branchId + "/nodes/" + pdfContainerId + "/attachments/" + ($("#uploadFilenameEditApac").val()).replace(" ", "_") + "/",
+        url: "https://api.cloudcms.com/repositories/" + repositoryId + "/branches/" + branchId + "/nodes/" + pdfContainerId + "/attachments/" + ($("#uploadFilenameEditNa").val()).replace(" ", "_") + "/",
         data: formData,
         contentType: false,
         processData: false,
@@ -2957,7 +2965,7 @@ function logout() {
 
 
 
-
+/*
 var fl = document.getElementById('myFileUpload5');
 
 fl.onchange = function(e) {
@@ -2994,7 +3002,7 @@ $("#uploadFilenameEdit5").on('change keyup paste mouseup', function() {
     $("#lnk1").html(tx + $("#uploadFilenameEdit5").val());
 });
 
-
+*/
 function copyToClipboard(element) {
     if ($("#uploadFilenameEdit5").val() !== "") {
         var $temp = $("<input>");
