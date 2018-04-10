@@ -181,6 +181,7 @@ var irelandData={
 */
 //Switching from local developement to production will require switching config objects
 
+console.log(platform.getDriver().getHttpHeaders()["Authorization"])
 function getPage(callback) {
 
     //            var config = {
@@ -213,7 +214,7 @@ function getPage(callback) {
         }
     }).then(function() {
         platform = this;
-        console.log(platform + '---');
+        sessionStorage.setItem("plat",platform.getDriver().getHttpHeaders()["Authorization"]);
 
         document.cookie = "username=" + username;
         document.cookie = "password=" + password;
@@ -675,6 +676,11 @@ function reShowForm(pageIdToLoad) {
     }).then(function() {
         platform = this;
         console.log('reshow form ' + platform)
+        console.log(platform.getDriver().getHttpHeaders()["Authorization"]);
+
+        sessionStorage.setItem("plat",platform.getDriver().getHttpHeaders()["Authorization"]);
+
+
         document.cookie = "username=" + username;
         document.cookie = "password=" + password;
          /* add country list based on username/password*/   
@@ -992,13 +998,13 @@ function showFormRedirect(pageIdToLoad) {
     setTimer();
     console.log("Timer Set");
     var config = {
-"clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
-"clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
-"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
-"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
- "baseURL": "https://api.cloudcms.com",
-"application": "3be07fd41b525b0601ae"
-} 
+        "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+        "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+        "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+        "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+         "baseURL": "https://api.cloudcms.com",
+        "application": "3be07fd41b525b0601ae"
+        } 
     $("#dialog").dialog("close");
 
     Gitana.connect(config, function(err) {
@@ -1153,7 +1159,7 @@ function showFormMicro(pageIdToLoad) {
 
         }
     }).then(function() {
-        platform = this;
+        //platform = this;
         console.log(platform + ' in showFormMicro');
 
 
@@ -1335,13 +1341,13 @@ function showFormImageTop(pageIdToLoad) {
     setTimer();
     console.log("Timer Set");
     var config = {
-"clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
-"clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
-"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
-"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
- "baseURL": "https://api.cloudcms.com",
-"application": "3be07fd41b525b0601ae"
-}
+        "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+        "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+        "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+        "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+         "baseURL": "https://api.cloudcms.com",
+        "application": "3be07fd41b525b0601ae"
+        }
 
 
     $("#dialog").dialog("close");
@@ -1357,7 +1363,7 @@ function showFormImageTop(pageIdToLoad) {
 
         }
     }).then(function() {
-        platform = this;
+        //platform = this;
         document.cookie = "username=" + username;
         document.cookie = "password=" + password;
          /* add country list based on username/password*/   
@@ -1460,13 +1466,13 @@ function showFormLatamHome(pageIdToLoad) {
     setTimer();
     console.log("Timer Set");
     var config = {
-"clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
-"clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
-"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
-"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
- "baseURL": "https://api.cloudcms.com",
-"application": "3be07fd41b525b0601ae"
-}
+        "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+        "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+        "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+        "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+         "baseURL": "https://api.cloudcms.com",
+        "application": "3be07fd41b525b0601ae"
+        }
 
 
     $("#dialog").dialog("close");
@@ -1482,7 +1488,7 @@ function showFormLatamHome(pageIdToLoad) {
 
         }
     }).then(function() {
-        platform = this;
+        //platform = this;
         document.cookie = "username=" + username;
         document.cookie = "password=" + password;
          /* add country list based on username/password*/   
@@ -1738,7 +1744,7 @@ function showFormRowImg(pageIdToLoad) {
 
         }
     }).then(function() {
-        platform = this;
+        //platform = this;
         document.cookie = "username=" + username;
         document.cookie = "password=" + password;
          /* add country list based on username/password*/   
@@ -1999,7 +2005,7 @@ function showFormIreland(pageIdToLoad) {
 
         }
     }).then(function() {
-        platform = this;
+        //platform = this;
         document.cookie = "username=" + username;
         document.cookie = "password=" + password;
          /* add country list based on username/password*/   
@@ -2098,13 +2104,13 @@ function showFormNA() {
     setTimer();
     console.log("Timer Set");
     var config = {
-"clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
-"clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
-"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
-"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
- "baseURL": "https://api.cloudcms.com",
-"application": "3be07fd41b525b0601ae"
-}
+        "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+        "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+        "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+        "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+         "baseURL": "https://api.cloudcms.com",
+        "application": "3be07fd41b525b0601ae"
+        }
 
 
     $("#dialog").dialog("close");
@@ -2120,7 +2126,7 @@ function showFormNA() {
 
         }
     }).then(function() {
-        platform = this;
+        //platform = this;
         document.cookie = "username=" + username;
         document.cookie = "password=" + password;
          /* add country list based on username/password*/   
@@ -2367,13 +2373,13 @@ function showResourcesForm(){
     setTimer();
     console.log("Timer Set");
     var config = {
-"clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
-"clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
-"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
-"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
- "baseURL": "https://api.cloudcms.com",
-"application": "3be07fd41b525b0601ae"
-}
+        "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+        "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+        "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+        "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+         "baseURL": "https://api.cloudcms.com",
+        "application": "3be07fd41b525b0601ae"
+        }
 
 
     $("#dialog").dialog("close");
@@ -2389,7 +2395,7 @@ function showResourcesForm(){
 
         }
     }).then(function() {
-        platform = this;
+        //platform = this;
         document.cookie = "username=" + username;
         document.cookie = "password=" + password;
          /* add country list based on username/password*/   
@@ -2834,13 +2840,14 @@ function submitFormLatam() {
 
 
 function submitFormNa() {
-    getPage();
 
     var pdfContainerId = 'd427de3db01e378f64fb';
     var formData = new FormData($("#frmeditSubmitFormNa")[0]);
-console.log(platform)
-    var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
-    var form = $("#frmeditSubmitFormLatam");
+    
+    var platfrm = sessionStorage.getItem('plat');
+    console.log(platfrm);
+   // var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
+    var form = $("#frmeditSubmitFormNa");
 
     $.ajax({
         type: "POST",
@@ -2849,14 +2856,14 @@ console.log(platform)
         contentType: false,
         processData: false,
         headers: {
-            authorization: authorizationHeader
+            authorization: platfrm
         },
         success: function (response) {
-        /*  //success process here
-            var txt = $("#uploadFilenameEdit5").val();
-            $("#lnk").html('https://f2472b6e-e1f1-4c52-9eed-f7797ff8e908-hosted.cloudcms.net/static/test.pdf?repository=e083f23fc5141afe5d22&branch=fcf1c3fb882fd40ecf97&node=f2585ff41013540945ab&attachment=' + txt);
+          //success process here
+            var txt = $("#uploadFilenameEditNa").val() ;
+            $("#lnk").html('https://3abed68c-41f8-43a1-a7a0-f80ccbb1ded4-hosted.cloudcms.net/static/test.pdf?repository=e083f23fc5141afe5d22&branch=fcf1c3fb882fd40ecf97&node=f2585ff41013540945ab&attachment=' + txt);
             $("#cpy_element").css('display', 'block');
-        */
+         
         }
     });
 }
@@ -3004,7 +3011,7 @@ $("#uploadFilenameEdit5").on('change keyup paste mouseup', function() {
 
 */
 function copyToClipboard(element) {
-    if ($("#uploadFilenameEdit5").val() !== "") {
+    if ($("#uploadFilenameEditNa").val() !== "") {
         var $temp = $("<input>");
         $("body").append($temp);
         $temp.val($(element).text()).select();
