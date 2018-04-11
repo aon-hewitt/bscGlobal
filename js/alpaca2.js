@@ -2531,43 +2531,7 @@ function showPageResources(pageIdToLoad) {
                         }
                     }
                 },
-                /*
-                        "communications": {
-                            "type": "array",
-                            "title": "communications",
-                            "items": {
-                                "type": "object",
-                                "title": "item",
-                                "properties": {
-                                    "description": {
-                                        "type": "string",
-                                        "title": "description"
-                                    },
-                                    "link": {
-                                        "type": "string",
-                                        "title": "link"
-                                    }
-                                }
-                            }
-                        },
-                        "enrollment": {
-                            "type": "array",
-                            "title": "enrollment",
-                            "items": {
-                                "type": "object",
-                                "title": "item",
-                                "properties": {
-                                    "description": {
-                                        "type": "string",
-                                        "title": "description"
-                                    },
-                                    "link": {
-                                        "type": "string",
-                                        "title": "link"
-                                    }
-                                }
-                            }
-                        },*/
+            
                 "forms": {
                     "type": "array",
                     "title": "forms",
