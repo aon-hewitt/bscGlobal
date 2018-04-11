@@ -2466,6 +2466,19 @@ function showPageResources(pageIdToLoad) {
             "title": "newResources",
             "type": "object",
             "properties": {
+                "name":{
+                    "type":"string",
+                    "title":"name",
+                    "readonly":true
+                },
+                "heading":{
+                    "type":"string",
+                    "title":"heading"
+                },
+                "mainbody":{
+                    "type":"string",
+                    "title":"mainbody"
+                },
                 "generalBenefits": {
                     "type": "array",
                     "title": "generalBenefits",
@@ -2599,6 +2612,9 @@ function showPageResources(pageIdToLoad) {
 
                             var value = this.getValue();
 
+                            node.name = value.name;                            
+                            node.heading = value.heading;
+                            node.mainbody = value.mainbody;                            
 
                             node.generalBenefits = value.generalBenefits;
                             node.consumerism = value.consumerism;
@@ -2653,12 +2669,9 @@ function showMFForm(pageIdToLoad) {
                 "properties": {
                         "name": {
                             "type": "string",
-                            "title": "name"
-                        },
-                        "title": {
-                            "type": "string",
-                            "title": "title"
-                        },
+                            "title": "name",
+                            "readonly":true
+                        },                         
                         "headerTitle": {
                             "type": "string",
                             "title": "headerTitle"
