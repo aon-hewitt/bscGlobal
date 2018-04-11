@@ -181,7 +181,7 @@ var irelandData={
 */
 //Switching from local developement to production will require switching config objects
 
-console.log(platform.getDriver().getHttpHeaders()["Authorization"])
+
 function getPage(callback) {
 
     //            var config = {
@@ -214,8 +214,7 @@ function getPage(callback) {
         }
     }).then(function() {
         platform = this;
-        sessionStorage.setItem("plat",platform.getDriver().getHttpHeaders()["Authorization"]);
-
+        
         document.cookie = "username=" + username;
         document.cookie = "password=" + password;
          /* add country list based on username/password*/   
@@ -323,7 +322,8 @@ function loadEmea(){
                 "dataSource": belgiumData
             }
         });*/
-       
+        $("#alpaca1").css('display','block');
+         $("#alpaca1").prev().css('display','block');
      
 
     }else  if(cntr == "france"){        
@@ -342,7 +342,8 @@ function loadEmea(){
         $("#alpaca1").append('<option value="ed6064ed9694b0e2f981">Workflex, Vacaion and Holidays</option>');
         $("#alpaca1").append('<option value="bf8975d87cee90707d3c">Voluntary Benefits</option>');
         $("#alpaca1").append('<option value="8e707aeed0449d39c9bb">myResources</option>');
-
+         $("#alpaca1").css('display','block');
+         $("#alpaca1").prev().css('display','block');
 
         /*
         $("#myCntrEmea").alpaca({
@@ -372,7 +373,8 @@ function loadEmea(){
         $("#alpaca1").append('<option value="3509cedc84dc108f695e">myResources</option>');
 
 
-
+            $("#alpaca1").css('display','block');
+         $("#alpaca1").prev().css('display','block');
         /* $("#myCntrEmea").alpaca({
             "options": {
                 "label": "What page would you like to edit?",
@@ -399,6 +401,8 @@ function loadEmea(){
         $("#alpaca1").append('<option value="ba17efbd225e95afa5ae">Voluntary Benefits</option>');
         $("#alpaca1").append('<option value="06ebf9f6b50b9123d16a">myResources</option>');
 
+            $("#alpaca1").css('display','block');
+         $("#alpaca1").prev().css('display','block');
         /*
         $("#myCntrEmea").alpaca({
             "options": {
@@ -426,6 +430,9 @@ function loadEmea(){
         $("#alpaca1").append('<option value="25505174c033d08c8cf8">Voluntary Benefits</option>');
         $("#alpaca1").append('<option value="c7c243a91336f42a74c4">myResources</option>');
 
+            $("#alpaca1").css('display','block');
+         $("#alpaca1").prev().css('display','block');
+
         /*$("#myCntrEmea").alpaca({
             "options": {
                 "label": "What page would you like to edit?",
@@ -452,6 +459,9 @@ function loadEmea(){
         $("#alpaca1").append('<option value="ca4ff74b5012745c0338">Voluntary Benefits</option>');
         $("#alpaca1").append('<option value="cfa046a067d11beb92cb">myResources</option>');
 
+
+        $("#alpaca1").css('display','block');
+        $("#alpaca1").prev().css('display','block');
         /*$("#myCntrEmea").alpaca({
             "options": {
                 "label": "What page would you like to edit?",
@@ -480,6 +490,8 @@ function loadEmea(){
         $("#alpaca1").append('<option value="3cbfaa773d64a707f6a5">Workflex, Vacaion and Holidays</option>');        
         $("#alpaca1").append('<option value="a6c28487ce4e0966d531">myResources</option>');
 
+        $("#alpaca1").css('display','block');
+        $("#alpaca1").prev().css('display','block');
         /*$("#myCntrEmea").alpaca({
             "options": {
                 "label": "What page would you like to edit?",
@@ -509,6 +521,8 @@ function loadEmea(){
         $("#alpaca1").append('<option value="f7fa4eb09f5e3661480e">Voluntary Benefits</option>');
         $("#alpaca1").append('<option value="9b435d57d97d8bc83b15">myResources</option>');
 
+        $("#alpaca1").css('display','block');
+        $("#alpaca1").prev().css('display','block');
         /*$("#myCntrEmea").alpaca({
             "options": {
                 "label": "What page would you like to edit?",
@@ -537,7 +551,8 @@ function loadEmea(){
         $("#alpaca1").append('<option value="e472c46c51228b8b8a18">myLife</option>'); 
         $("#alpaca1").append('<option value="8fb31c12b3e045f6acb1">GESOP</option>'); 
         $("#alpaca1").append('<option value="d9169a3c36227bcd687b">myResources</option>');
-
+        $("#alpaca1").css('display','block');
+        $("#alpaca1").prev().css('display','block');
 
         showFormIreland(); 
     }
@@ -589,6 +604,8 @@ function loadNa(){
         $("#alpaca1").append('<option value="c39675aa5b6e5cb772a2">Btfyl</option>');
         $("#alpaca1").append('<option value="1983821b05719f2cbf44">myResources</option>');
 
+        $("#alpaca1").css('display','block');
+        $("#alpaca1").prev().css('display','block');
 
         /*$("#myCntr").alpaca({
             "options": {
@@ -627,6 +644,8 @@ function loadNa(){
         $("#alpaca1").append('<option value="da3faa5d515d8e255f05">Vacaion and Holidays</option>');
         $("#alpaca1").append('<option value="b77186da202d2ab9ba9e">myResources</option>');
 
+        $("#alpaca1").css('display','block');
+        $("#alpaca1").prev().css('display','block');
 
     }else  if(cntr == "canada"){
         showFormRowImg("ee274c79588e42e19a9e");
@@ -676,11 +695,7 @@ function reShowForm(pageIdToLoad) {
     }).then(function() {
         platform = this;
         console.log('reshow form ' + platform)
-        console.log(platform.getDriver().getHttpHeaders()["Authorization"]);
-
-        sessionStorage.setItem("plat",platform.getDriver().getHttpHeaders()["Authorization"]);
-
-
+        
         document.cookie = "username=" + username;
         document.cookie = "password=" + password;
          /* add country list based on username/password*/   
@@ -703,6 +718,9 @@ function reShowForm(pageIdToLoad) {
 
 
 function showPageColumn(){
+    $("#alpaca1").css('display','none');
+    $("#alpaca1").prev().css('display','none');
+
     pageIdToLoad = $("#alpaca1").val(); 
     $("#myform").html("");
     $("#myform").alpaca({
@@ -824,7 +842,8 @@ function showPageColumn(){
                             node.column3 = value.column3;
                             
                             node.update().then(function () {
-                                alert("Form Submitted")
+                                alert("Form Submitted");
+                                window.location ="../index.html";
                             });
                         }
                     }
@@ -989,7 +1008,7 @@ function showPageColumn(){
 
 //PageRedirect update/show page
 function showFormRedirect(pageIdToLoad) {
-    
+ 
    // if(pageIdToLoad == '' ) 
         pageIdToLoad = $("#alpaca2").val(); 
 
@@ -1038,6 +1057,9 @@ function showFormRedirect(pageIdToLoad) {
 }
 
 function showPageRedirect(pageIdToLoad){ 
+    $("#alpaca1").css('display','none');
+    $("#alpaca1").prev().css('display','none');
+
     //if(pageIdToLoad == '')
         pageIdToLoad = $("#alpaca2").val(); 
 
@@ -1090,7 +1112,8 @@ function showPageRedirect(pageIdToLoad){
                             
                             
                             node.update().then(function () {
-                                alert("Form Submitted")
+                                alert("Form Submitted");
+                                window.location ="../index.html";
                             });
                         }
                     }
@@ -1127,7 +1150,7 @@ function showPageRedirect(pageIdToLoad){
 
 //Microsite update/show page
 function showFormMicro(pageIdToLoad) {
-    console.log($("#alpaca1").val() + 'find val');
+
     
     pageIdToLoad = $("#alpaca1").val(); 
  
@@ -1191,6 +1214,10 @@ function showFormMicro(pageIdToLoad) {
 }
 
 function showPageMicro(){
+
+    $("#alpaca1").css('display','block');
+    $("#alpaca1").prev().css('display','block');
+
     pageIdToLoad = $("#alpaca1").val(); 
  
     $("#myform").html("");
@@ -1287,7 +1314,8 @@ function showPageMicro(){
                             node.Accordion2Body = value.Accordion2Body;
                             
                             node.update().then(function () {
-                                alert("Form Submitted")
+                                alert("Form Submitted");
+                                window.location ="../index.html";
                             });
                         }
                     }
@@ -1383,6 +1411,9 @@ function showFormImageTop(pageIdToLoad) {
 }
 
 function showPageImageTop(pageIdToLoad){
+    $("#alpaca1").css('display','none');
+    $("#alpaca1").prev().css('display','none');
+
    $("#myform").css('display','block');
     $("#myform").html("");
     $("#myform").alpaca({
@@ -1429,7 +1460,8 @@ function showPageImageTop(pageIdToLoad){
                             node.mainBody = value.mainBody;
                             
                             node.update().then(function () {
-                                alert("Form Submitted")
+                                alert("Form Submitted");
+                                window.location ="../index.html";
                             });
                         }
                     }
@@ -1509,6 +1541,9 @@ function showFormLatamHome(pageIdToLoad) {
 }
 
 function showPageLatamHome(pageIdToLoad){
+    $("#alpaca1").css('display','none');
+    $("#alpaca1").prev().css('display','none');
+
     console.log('here')
     pageIdToLoad = $("#alpaca1").val(); 
     $("#myform").html("");
@@ -1615,7 +1650,8 @@ function showPageLatamHome(pageIdToLoad){
                             node.lCountryLink = value.lCountryLink;
                             
                             node.update().then(function () {
-                                alert("Form Submitted")
+                                alert("Form Submitted");
+                                window.location ="../index.html";
                             });
                         }
                     }
@@ -1728,8 +1764,7 @@ function showFormRowImg(pageIdToLoad) {
         "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
          "baseURL": "https://api.cloudcms.com",
         "application": "3be07fd41b525b0601ae"
-        }
-
+    }
 
     $("#dialog").dialog("close");
 
@@ -1764,14 +1799,16 @@ function showFormRowImg(pageIdToLoad) {
 }
 
 function showPageRowImg(pageIdToLoad){
-    
+    $("#alpaca1").css('display','none');
+    $("#alpaca1").prev().css('display','none');
+
     $("#myform").html("");
     $("#myform").alpaca({
         "view": "bootstrap-edit",
         "data": node,
         "schema": {
-            "title": "PageColumn",
-            "description": "A data type to support for Page Redirect.",
+            "title": "Page Row",
+            "description": "A data type to support for Page.",
             "type": "object",
                "properties": {
                     "name": {
@@ -1880,7 +1917,8 @@ function showPageRowImg(pageIdToLoad){
                             
                             
                             node.update().then(function () {
-                                alert("Form Submitted")
+                                alert("Form Submitted");
+                                window.location ="../index.html";
                             });
                         }
                     }
@@ -2025,6 +2063,7 @@ function showFormIreland(pageIdToLoad) {
 }
 
 function showPageIreland(){
+
     $("#myform").html("");
     $("#myform").alpaca({
         "view": "bootstrap-edit",
@@ -2071,7 +2110,8 @@ function showPageIreland(){
                             
                             
                             node.update().then(function () {
-                                alert("Form Submitted")
+                                alert("Form Submitted");
+                                window.location ="../index.html";
                             });
                         }
                     }
@@ -2259,7 +2299,8 @@ function showPageMicro(){
                             node.Accordion2Body = value.Accordion2Body;
                             
                             node.update().then(function () {
-                                alert("Form Submitted")
+                                alert("Form Submitted");
+                                window.location ="../index.html";
                             });
                         }
                     }
@@ -2345,7 +2386,8 @@ function showHomepageForm(pageIdToLoad) {
                             node.name = value.name;                          
                             node.tile1 = value.tile1;
                             node.update().then(function () {
-                                alert("Form Submitted")
+                                alert("Form Submitted");
+                                window.location ="../index.html";
                             });
                         }
                     }
@@ -2564,7 +2606,8 @@ function showPageResources(pageIdToLoad) {
                             node.enrollment = value.enrollment;
                             node.forms = value.forms;
                             node.update().then(function() {
-                                alert("Resources Form Submitted")
+                                alert("Resources Form Submitted");
+                                window.location ="../index.html";
                             });
 
                         }
@@ -2727,7 +2770,8 @@ function showMFForm(pageIdToLoad) {
                             node.callout2 = value.callout2;
                             node.accordions = value.accordions;
                             node.update().then(function () {
-                                alert("Form Submitted")
+                                alert("Form Submitted");
+                                window.location ="../index.html";
                             });
                         }
                     }
@@ -2755,132 +2799,23 @@ function showMFForm(pageIdToLoad) {
     });
 }
 
+
+$("#tb2" ).click(function() {
+    getPage();
+});
+
 //Apac Uploads
 
 function submitFormApac() {
     var pdfContainerId = 'adffb141d0c8f2d2b0b8';
     var formData = new FormData($("#frmeditSubmitFormApac")[0]);
-    var platfrm = sessionStorage.getItem('plat');
-    //var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
+    
+    var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
     var form = $("#frmeditSubmitFormApac");
 
     $.ajax({
         type: "POST",
-        url: "https://api.cloudcms.com/repositories/" + repositoryId + "/branches/" + branchId + "/nodes/" + pdfContainerId + "/attachments/" + ($("#uploadFilenameEditApac").val()).replace(" ", "_") + "/",
-        data: formData,
-        contentType: false,
-        processData: false,
-        headers: {
-            authorization: platfrm
-        },
-        success: function (response) {
-        /*  //success process here
-            var txt = $("#uploadFilenameEdit5").val();
-            $("#lnk").html('https://f2472b6e-e1f1-4c52-9eed-f7797ff8e908-hosted.cloudcms.net/static/test.pdf?repository=e083f23fc5141afe5d22&branch=fcf1c3fb882fd40ecf97&node=f2585ff41013540945ab&attachment=' + txt);
-            $("#cpy_element").css('display', 'block');
-        */
-        }
-    });
-}
-
-
-
-function submitFormEmea() {
-    var pdfContainerId = '9f99c7dac34354d0d7a3';
-    var formData = new FormData($("#frmeditSubmitFormEmea")[0]);
-  var platfrm = sessionStorage.getItem('plat');
-   // var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
-    var form = $("#frmeditSubmitFormEmea");
-
-    $.ajax({
-        type: "POST",
-        url: "https://api.cloudcms.com/repositories/" + repositoryId + "/branches/" + branchId + "/nodes/" + pdfContainerId + "/attachments/" + ($("#uploadFilenameEditEmea").val()).replace(" ", "_") + "/",
-        data: formData,
-        contentType: false,
-        processData: false,
-        headers: {
-            authorization: platfrm
-        },
-        success: function (response) {
-        /*  //success process here
-            var txt = $("#uploadFilenameEdit5").val();
-            $("#lnk").html('https://f2472b6e-e1f1-4c52-9eed-f7797ff8e908-hosted.cloudcms.net/static/test.pdf?repository=e083f23fc5141afe5d22&branch=fcf1c3fb882fd40ecf97&node=f2585ff41013540945ab&attachment=' + txt);
-            $("#cpy_element").css('display', 'block');
-        */
-        }
-    });
-}
-
-
-function submitFormLatam() {
-    var pdfContainerId = 'f81ca80ee19347464f12';
-    var formData = new FormData($("#frmeditSubmitFormLatam")[0]);
-  var platfrm = sessionStorage.getItem('plat');
-   // var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
-    var form = $("#frmeditSubmitFormLatam");
-
-    $.ajax({
-        type: "POST",
-        url: "https://api.cloudcms.com/repositories/" + repositoryId + "/branches/" + branchId + "/nodes/" + pdfContainerId + "/attachments/" + ($("#uploadFilenameEditLatam").val()).replace(" ", "_") + "/",
-        data: formData,
-        contentType: false,
-        processData: false,
-        headers: {
-            authorization: platfrm
-        },
-        success: function (response) {
-        /*  //success process here
-            var txt = $("#uploadFilenameEdit5").val();
-            $("#lnk").html('https://f2472b6e-e1f1-4c52-9eed-f7797ff8e908-hosted.cloudcms.net/static/test.pdf?repository=e083f23fc5141afe5d22&branch=fcf1c3fb882fd40ecf97&node=f2585ff41013540945ab&attachment=' + txt);
-            $("#cpy_element").css('display', 'block');
-        */
-        }
-    });
-}
-
-
-function submitFormNa() {
-
-    var pdfContainerId = 'd427de3db01e378f64fb';
-    var formData = new FormData($("#frmeditSubmitFormNa")[0]);
-    
-    var platfrm = sessionStorage.getItem('plat');
-    console.log(platfrm);
-   // var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
-    var form = $("#frmeditSubmitFormNa");
-
-    $.ajax({
-        type: "POST",
-        url: "https://api.cloudcms.com/repositories/" + repositoryId + "/branches/" + branchId + "/nodes/" + pdfContainerId + "/attachments/" + ($("#uploadFilenameEditNa").val()).replace(" ", "_") + "/",
-        data: formData,
-        contentType: false,
-        processData: false,
-        headers: {
-            authorization: platfrm
-        },
-        success: function (response) {
-          //success process here
-            var txt = $("#uploadFilenameEditNa").val() ;
-            $("#lnk").html('https://3abed68c-41f8-43a1-a7a0-f80ccbb1ded4-hosted.cloudcms.net/static/test.pdf?repository=e083f23fc5141afe5d22&branch=fcf1c3fb882fd40ecf97&node=f2585ff41013540945ab&attachment=' + txt);
-            $("#cpy_element").css('display', 'block');
-         
-        }
-    });
-}
-
-//This is form upload scripting here--------------------------------------------
-
-/*
-function submitForm() {
-    var pdfContainerId = 'f2585ff41013540945ab';
-    var formData = new FormData($("#frmeditSubmitForm5")[0]);
-
-    var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
-    var form = $("#frmeditSubmitForm5");
-
-    $.ajax({
-        type: "POST",
-        url: "https://api.cloudcms.com/repositories/" + repositoryId + "/branches/" + branchId + "/nodes/" + pdfContainerId + "/attachments/" + ($("#uploadFilenameEdit5").val()).replace(" ", "_") + "/",
+        url: "https://api.cloudcms.com/repositories/" + repositoryId + "/branches/" + branchId + "/nodes/" + pdfContainerId + "/attachments/" + ($("#uploadFilenameApac").val()).replace(" ", "_") + "/",
         data: formData,
         contentType: false,
         processData: false,
@@ -2892,7 +2827,81 @@ function submitForm() {
         }
     });
 }
-*/
+
+
+
+function submitFormEmea() {
+    var pdfContainerId = '9f99c7dac34354d0d7a3';
+    var formData = new FormData($("#frmeditSubmitFormEmea")[0]);
+  
+    var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
+    var form = $("#frmeditSubmitFormEmea");
+
+    $.ajax({
+        type: "POST",
+        url: "https://api.cloudcms.com/repositories/" + repositoryId + "/branches/" + branchId + "/nodes/" + pdfContainerId + "/attachments/" + ($("#uploadFilenameEditEmea").val()).replace(" ", "_") + "/",
+        data: formData,
+        contentType: false,
+        processData: false,
+        headers: {
+            authorization: authorizationHeader
+        },
+        success: function (response) {
+        /*  //success process here
+             
+        */
+        }
+    });
+}
+
+
+function submitFormLatam() {
+    var pdfContainerId = 'f81ca80ee19347464f12';
+    var formData = new FormData($("#frmeditSubmitFormLatam")[0]);  
+    var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
+    var form = $("#frmeditSubmitFormLatam");
+
+    $.ajax({
+        type: "POST",
+        url: "https://api.cloudcms.com/repositories/" + repositoryId + "/branches/" + branchId + "/nodes/" + pdfContainerId + "/attachments/" + ($("#uploadFilenameEditLatam").val()).replace(" ", "_") + "/",
+        data: formData,
+        contentType: false,
+        processData: false,
+        headers: {
+            authorization: authorizationHeader
+        },
+        success: function (response) {
+        /*  //success process here
+            
+        */
+        }
+    });
+}
+
+
+function submitFormNa() {
+    getPage();
+    var pdfContainerId = 'd427de3db01e378f64fb';
+    var formData = new FormData($("#frmeditSubmitFormNa")[0]);   
+    var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
+    
+    var form = $("#frmeditSubmitFormNa");
+
+    $.ajax({
+        type: "POST",
+        url: "https://api.cloudcms.com/repositories/" + repositoryId + "/branches/" + branchId + "/nodes/" + pdfContainerId + "/attachments/" + ($("#uploadFilenameEditNa").val()).replace(" ", "_") + "/",
+        data: formData,
+        contentType: false,
+        processData: false,
+        headers: {
+            authorization: authorizationHeader
+        },
+        success: function (response) {
+          
+        }
+    });
+}
+ 
 //This ends form upload scripting-----------------------------------------------
 
 
@@ -2967,51 +2976,169 @@ function logout() {
     Gitana.deleteCookie("username", "/");
 
     platform.logout();
-    open("alpaca2.html", "_self");
+    open("index.html", "_self");
 }
 
 
 
-/*
-var fl = document.getElementById('myFileUpload5');
+ /*check valid file upload formats*/
+ if($("#myFileUploadApac").val() != null){
 
-fl.onchange = function(e) {
-    var ext = this.value.match(/\.(.+)$/)[1];
-    switch (ext) {
-        case 'pdf':
-            console.log('pdf file type allowed');
-            break;
-        case 'xls':
-            console.log('xls file type allowed');
-            break;
-        case 'xlsx':
-            console.log('xlsx file type allowed');
-            break;
-        case 'pptx':
-            console.log('pptx file type allowed');
-            break;
-        case 'ppt':
-            console.log('ppt file type allowed');
-            break;
-        case 'pptm':
-            console.log('pptm file type allowed');
-            break;
-        default:
-            alert('Pdf , ppt or xls/xlsx files may be uploaded');
-            this.value = '';
-    }
-};
+    var flApac = document.getElementById('myFileUploadApac');
+
+    flApac.onchange = function(e) {
+        var ext = this.value.match(/\.(.+)$/)[1];
+        switch (ext) {
+            case 'pdf':
+                console.log('pdf file type allowed');
+                break;
+            case 'xls':
+                console.log('xls file type allowed');
+                break;
+            case 'xlsx':
+                console.log('xlsx file type allowed');
+                break;
+            case 'pptx':
+                console.log('pptx file type allowed');
+                break;
+            case 'ppt':
+                console.log('ppt file type allowed');
+                break;
+            case 'pptm':
+                console.log('pptm file type allowed');
+                break;
+            default:
+                alert('Pdf , ppt or xls/xlsx files may be uploaded');
+                this.value = '';
+        }
+    };
+}
+if($("#myFileUploadEmea").val() != null){
+    var flEmea = document.getElementById('myFileUploadEmea');
+
+    flEmea.onchange = function(e) {
+        var ext = this.value.match(/\.(.+)$/)[1];
+        switch (ext) {
+            case 'pdf':
+                console.log('pdf file type allowed');
+                break;
+            case 'xls':
+                console.log('xls file type allowed');
+                break;
+            case 'xlsx':
+                console.log('xlsx file type allowed');
+                break;
+            case 'pptx':
+                console.log('pptx file type allowed');
+                break;
+            case 'ppt':
+                console.log('ppt file type allowed');
+                break;
+            case 'pptm':
+                console.log('pptm file type allowed');
+                break;
+            default:
+                alert('Pdf , ppt or xls/xlsx files may be uploaded');
+                this.value = '';
+        }
+    };
+}
+
+if($("#myFileUploadLatam").val() != null){
+    var flLatam = document.getElementById('myFileUploadLatam');
+
+    flLatam.onchange = function(e) {
+        var ext = this.value.match(/\.(.+)$/)[1];
+        switch (ext) {
+            case 'pdf':
+                console.log('pdf file type allowed');
+                break;
+            case 'xls':
+                console.log('xls file type allowed');
+                break;
+            case 'xlsx':
+                console.log('xlsx file type allowed');
+                break;
+            case 'pptx':
+                console.log('pptx file type allowed');
+                break;
+            case 'ppt':
+                console.log('ppt file type allowed');
+                break;
+            case 'pptm':
+                console.log('pptm file type allowed');
+                break;
+            default:
+                alert('Pdf , ppt or xls/xlsx files may be uploaded');
+                this.value = '';
+        }
+    };
+}
+if($("#myFileUploadNa").val() != null){
+    var flNa = document.getElementById('myFileUploadNa');
+
+    flNa.onchange = function(e) {
+        var ext = this.value.match(/\.(.+)$/)[1];
+        switch (ext) {
+            case 'pdf':
+                console.log('pdf file type allowed');
+                break;
+            case 'xls':
+                console.log('xls file type allowed');
+                break;
+            case 'xlsx':
+                console.log('xlsx file type allowed');
+                break;
+            case 'pptx':
+                console.log('pptx file type allowed');
+                break;
+            case 'ppt':
+                console.log('ppt file type allowed');
+                break;
+            case 'pptm':
+                console.log('pptm file type allowed');
+                break;
+            default:
+                alert('Pdf , ppt or xls/xlsx files may be uploaded');
+                this.value = '';
+        }
+    };
+}
+/*check valid file upload formats --- */
 
 
-$("#uploadFilenameEdit5").on('change keyup paste mouseup', function() {
-    $("#myFileName").html($("#uploadFilenameEdit5").val());
-    var tx = "https://f2472b6e-e1f1-4c52-9eed-f7797ff8e908-hosted.cloudcms.net/static/test.pdf?repository=e083f23fc5141afe5d22&branch=fcf1c3fb882fd40ecf97&node=f2585ff41013540945ab&attachment=";
-    $("#lnk1").html(tx + $("#uploadFilenameEdit5").val());
+
+/*copy the url for each upload containers*/ 
+$("#uploadFilenameApac").on('change keyup paste mouseup', function() {
+    $("#myFileName").html($("#uploadFilenameApac").val());
+    var tx = "https://3abed68c-41f8-43a1-a7a0-f80ccbb1ded4-hosted.cloudcms.net/static/test.pdf?repository=5806d444c717deabe6fc&branch=956f6d1d79eef20c2b37&node=adffb141d0c8f2d2b0b8&attachment=";
+    $("#lnk1").html(tx + $("#uploadFilenameApac").val());
 });
 
-*/
+
+
+$("#uploadFilenameEditEmea").on('change keyup paste mouseup', function() {
+    $("#myFileName").html($("#uploadFilenameEditEmea").val());
+    var tx = "https://3abed68c-41f8-43a1-a7a0-f80ccbb1ded4-hosted.cloudcms.net/static/test.pdf?repository=5806d444c717deabe6fc&branch=956f6d1d79eef20c2b37&node=9f99c7dac34354d0d7a3&attachment=";
+    $("#lnk1").html(tx + $("#uploadFilenameEditEmea").val());
+});
+
+
+$("#uploadFilenameEditLatam").on('change keyup paste mouseup', function() {
+    $("#myFileName").html($("#uploadFilenameEditLatam").val());
+    var tx = "https://3abed68c-41f8-43a1-a7a0-f80ccbb1ded4-hosted.cloudcms.net/static/test.pdf?repository=5806d444c717deabe6fc&branch=956f6d1d79eef20c2b37&node=f81ca80ee19347464f12&attachment=";
+    $("#lnk1").html(tx + $("#uploadFilenameEditLatam").val());
+});
+
+
+$("#uploadFilenameEditNa").on('change keyup paste mouseup', function() {
+    $("#myFileName").html($("#uploadFilenameEditNa").val());
+    var tx = "https://3abed68c-41f8-43a1-a7a0-f80ccbb1ded4-hosted.cloudcms.net/static/test.pdf?repository=5806d444c717deabe6fc&branch=956f6d1d79eef20c2b37&node=d427de3db01e378f64fb&attachment=";
+    $("#lnk1").html(tx + $("#uploadFilenameEditNa").val());
+});
+
 function copyToClipboard(element) {
-    if ($("#uploadFilenameEditNa").val() !== "") {
+    if ($("#uploadFilename").val() !== "") {
         var $temp = $("<input>");
         $("body").append($temp);
         $temp.val($(element).text()).select();
