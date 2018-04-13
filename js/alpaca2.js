@@ -603,6 +603,8 @@ function loadNa(){
         $("#alpaca1").append('<option value="bf8975d87cee90707d3c">Voluntary Benefits</option>');
         $("#alpaca1").append('<option value="c39675aa5b6e5cb772a2">Btfyl</option>');
         $("#alpaca1").append('<option value="1983821b05719f2cbf44">myResources</option>');
+        $("#alpaca1").append('<option value="89c40f637b850ab783a0">New Hires</option>');
+        
 
         $("#alpaca1").css('display','block');
         $("#alpaca1").prev().css('display','block');
