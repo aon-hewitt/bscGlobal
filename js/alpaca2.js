@@ -184,6 +184,7 @@ var irelandData={
 
 function getPage(callback) {
 
+
     //            var config = {
     //            "username": username,
     //            "password": password,
@@ -193,8 +194,10 @@ function getPage(callback) {
     var config = {
         "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
         "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",        
-        "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
-        "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+        //"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+        //"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+        "username":username,
+        "password":password,
          "baseURL": "https://api.cloudcms.com",
         "application": "3be07fd41b525b0601ae"
         }
@@ -2942,6 +2945,23 @@ function setCredentialsFromLogin() {
     username = $("#txtUsername").val();
     password = $("#txtPassword").val();
     getPage();
+    if(username=='poojasanghavi'){
+        window.location ="canada.html";
+    }else if(username=='poojasanghavi'){
+        window.location ="pr.html"
+    }else if(username=='poojasanghavi'){
+        window.location ="costarica.html";
+    }else if(username=='poojasanghavi'){
+        window.location ="emeaIndex.html";
+    }else if(username=='poojasanghavi'){
+        window.location ="apacIndex.html";
+    }else if(username=='poojasanghavi'){
+        window.location ="latamIndex.html";
+    }else if(username=='poojasanghavi'){
+        window.location ="naIndex.html";
+    }else if(username=='poojasanghavi'){
+        window.location ="ireland.html";
+    }
 }
 
 
