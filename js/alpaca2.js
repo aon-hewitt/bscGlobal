@@ -2961,6 +2961,9 @@ function setCredentialsFromLogin() {
         window.location ="naIndex.html";
     }else if(username=='poojasanghavi'){
         window.location ="ireland.html";
+    }else {
+        window.location ="index.html";
+        $(".container.landingpage").css('display','block');
     }
 }
 
