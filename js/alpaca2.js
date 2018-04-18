@@ -2977,7 +2977,7 @@ function setCredentialsFromLogin() {
         window.location ="ireland.html";
     }else {*/
         //window.location ="index.html";
-        $(".container.landingpage").css('display','block');
+        //$(".container.landingpage").css('display','block');
     //}
 }
 
