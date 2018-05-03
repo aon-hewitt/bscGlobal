@@ -191,7 +191,7 @@ function getPage(callback) {
     //            "baseURL": "/proxy"
     //                    }
  
-    var config = {
+   /* var config = {
         "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
         "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",        
         //"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
@@ -200,8 +200,15 @@ function getPage(callback) {
         "password":password,
          "baseURL": "https://api.cloudcms.com",
         "application": "3be07fd41b525b0601ae"
+        }*/
+    var config = {
+        "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+        "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",        
+        "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+        "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",        
+         "baseURL": "https://api.cloudcms.com",
+        "application": "3be07fd41b525b0601ae"
         }
-
 
     $("#dialog").dialog("close");
 
@@ -217,7 +224,7 @@ function getPage(callback) {
         }
     }).then(function() {
         platform = this;
-        
+        console.log('called for palat')
         document.cookie = "username=" + username;
         document.cookie = "password=" + password;
          /* add country list based on username/password*/   
@@ -566,6 +573,10 @@ function loadEmea(){
  
 function loadLatam(){
  var cntr = $("#alpaca1").val();
+ if(cntr == '' || cntr == null){
+    cntr= $("#alpaca2").val();
+ }
+ console.log(cntr)
  if(cntr == "costa"){
      showFormImageTop('1ad68c52d4d5e445dd0d'); 
  }else if(cntr == "latam"){
@@ -693,13 +704,23 @@ function reShowForm(pageIdToLoad) {
     var config = {
             "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
             "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
-           // "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
-           // "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
-            "username":username,
-            "password":password,
+            "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+            "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",           
              "baseURL": "https://api.cloudcms.com",
             "application": "3be07fd41b525b0601ae"
             }
+
+       /*var config = {
+        "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+        "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",        
+       
+        "username":username,
+        "password":password,
+         "baseURL": "https://api.cloudcms.com",
+        "application": "3be07fd41b525b0601ae"
+        }*/
+
+
     $("#dialog").dialog("close");
 
     Gitana.connect(config, function(err) {
@@ -1039,13 +1060,20 @@ function showFormRedirect(pageIdToLoad) {
     var config = {
         "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
         "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
-        //"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
-        //"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
-         "username":username,
-        "password":password,
+        "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+        "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",        
          "baseURL": "https://api.cloudcms.com",
         "application": "3be07fd41b525b0601ae"
         } 
+    /*var config = {
+        "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+        "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",          
+        "username":username,
+        "password":password,
+         "baseURL": "https://api.cloudcms.com",
+        "application": "3be07fd41b525b0601ae"
+        }*/
+
     $("#dialog").dialog("close");
 
     Gitana.connect(config, function(err) {
@@ -1184,13 +1212,19 @@ function showFormMicro(pageIdToLoad) {
     var config = {
         "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
         "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
-        //"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
-        //"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+        "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+        "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+         "baseURL": "https://api.cloudcms.com",
+        "application": "3be07fd41b525b0601ae"
+        }
+    /*var config = {
+        "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+        "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
          "username":username,
         "password":password,
          "baseURL": "https://api.cloudcms.com",
         "application": "3be07fd41b525b0601ae"
-        }
+        }*/
 
 
     $("#dialog").dialog("close");
@@ -1392,22 +1426,22 @@ function showFormImageTop(pageIdToLoad) {
     console.log("Timer Cleared");
     setTimer();
     console.log("Timer Set");
-    var config = {
+    /*var config = {
         "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
         "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
         "username":username,
         "password":password,
          "baseURL": "https://api.cloudcms.com",
         "application": "3be07fd41b525b0601ae"
-        } 
-    /*var config = {
+        } */
+     var config = {
         "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
         "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
         "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
         "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",        
          "baseURL": "https://api.cloudcms.com",
         "application": "3be07fd41b525b0601ae"
-        }*/
+        } 
 
     $("#dialog").dialog("close");
 
@@ -1531,23 +1565,24 @@ function showFormLatamHome(pageIdToLoad) {
     var config = {
         "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
         "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
-        //"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
-        //"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+        "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+        "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
          "username":username,
         "password":password,
          "baseURL": "https://api.cloudcms.com",
         "application": "3be07fd41b525b0601ae"
         }
 
-       /*
-       var config = {
+          /*var config = {
         "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
         "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
-        "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
-        "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",         
+         "username":username,
+        "password":password,
          "baseURL": "https://api.cloudcms.com",
         "application": "3be07fd41b525b0601ae"
         }*/
+
+
 
     $("#dialog").dialog("close");
 
@@ -1802,21 +1837,21 @@ function showFormRowImg(pageIdToLoad) {
     var config = {
         "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
         "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
-        //"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
-        //"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+        "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+        "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",        
+         "baseURL": "https://api.cloudcms.com",
+        "application": "3be07fd41b525b0601ae"
+    }
+        /*var config = {
+        "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+        "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
          "username":username,
         "password":password,
          "baseURL": "https://api.cloudcms.com",
         "application": "3be07fd41b525b0601ae"
-    }
-    /*var config = {
-        "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
-        "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
-        "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
-        "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",         
-         "baseURL": "https://api.cloudcms.com",
-        "application": "3be07fd41b525b0601ae"
-    }*/
+        }*/
+
+
     $("#dialog").dialog("close");
 
     Gitana.connect(config, function(err) {
@@ -2074,13 +2109,20 @@ function showFormIreland(pageIdToLoad) {
     var config = {
         "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
         "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
-        //"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
-        //"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+        "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+        "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",         
+         "baseURL": "https://api.cloudcms.com",
+        "application": "3be07fd41b525b0601ae"
+        }
+
+    /*var config = {
+        "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+        "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
          "username":username,
         "password":password,
          "baseURL": "https://api.cloudcms.com",
         "application": "3be07fd41b525b0601ae"
-        }
+        }*/
 
 
     $("#dialog").dialog("close");
@@ -2196,16 +2238,24 @@ function showFormNA() {
     console.log("Timer Cleared");
     setTimer();
     console.log("Timer Set");
+    
     var config = {
         "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
         "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
-        //"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
-        //"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+        "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+        "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",       
+         "baseURL": "https://api.cloudcms.com",
+        "application": "3be07fd41b525b0601ae"
+        }
+    /*var config = {
+        "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+        "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
          "username":username,
         "password":password,
          "baseURL": "https://api.cloudcms.com",
         "application": "3be07fd41b525b0601ae"
-        }
+        }*/
+
 
 
     $("#dialog").dialog("close");
@@ -2472,11 +2522,21 @@ function showResourcesForm(){
     var config = {
         "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
         "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
-        //"username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
-        //"password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
+        "username":"4adb8666-0509-4a12-93e4-96380b6dd0db",
+        "password":"bsoF/w0lgSrZ8/dnf5nq0SF26S5j+/c0ICc3E48IfmHEpAyy0eGt/mLehvM2OaXKxvxhemHcWkdpT5K3itxSF02FfMxut7Oh1vGoTpEJbrI=",
          "baseURL": "https://api.cloudcms.com",
         "application": "3be07fd41b525b0601ae"
         }
+
+    /*var config = {
+        "clientKey":"5656f503-5720-47d4-8453-19284c317e9c",
+        "clientSecret":"wdCugk2wakvRfq5CXxIk2J+/0GNS01I1QE68PyBJJm3rka+y7vKdKt772Vp1eOvIA+TK49ojOT+9FSquWEJsAqniM1dSADrdL4fxjgon+bQ=",
+         "username":username,
+        "password":password,
+         "baseURL": "https://api.cloudcms.com",
+        "application": "3be07fd41b525b0601ae"
+        }*/
+
 
 
     $("#dialog").dialog("close");
@@ -3006,23 +3066,29 @@ function setCredentialsFromLogin() {
         window.location ="emeaIndex.html"; //Myriam.Brame@bsci.com
     }else if(username=='nathaniel'){
         window.location ="apacIndex.html"; //Nathaniel.Tan@bsci.com
-    }else if(username=='poojasanghavi'){
+    }else if(username=='poojasanghavi121'){
         window.location ="ireland.html"; //na
     } 
 }
 
 
 
-function logout() {
-    Gitana.deleteCookie("password", "/secure-bsc-admin");
-    Gitana.deleteCookie("username", "/secure-bsc-admin");
-    Gitana.deleteCookie("password", "/localhost");
-    Gitana.deleteCookie("username", "/localhost");
-    Gitana.deleteCookie("password", "/");
-    Gitana.deleteCookie("username", "/");
+function logout()
+ {
+    getPage();
+    
+    setTimeout(function(){ 
+        Gitana.deleteCookie("password", "/");
+        Gitana.deleteCookie("username", "/");
+        Gitana.deleteCookie("password", "/localhost");
+        Gitana.deleteCookie("username", "/localhost");
+        Gitana.deleteCookie("password", "/");
+        Gitana.deleteCookie("username", "/");
 
-    platform.logout();
-    open("index.html", "_self");
+        platform.logout();
+        open("index.html", "_self");
+    }, 2000);
+   
 }
 
 
