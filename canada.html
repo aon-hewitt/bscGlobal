@@ -97,16 +97,16 @@
 
                         <label class="control-label alpaca-control-label" for="alpaca2">What country would you like to select?</label>
 
-                        <select id="alpaca2" class="alpaca-control form-control" name="" onchange="loadNa()">
+                        <select id="alpaca2" class="alpaca-control form-control" name="" onchange="loadSp()">
                             <option value="">None</option>
-                            <option value="canada">Canada</option>
-                                                      
+                            <option value="canada">Canada</option>                            
+                            <option value="latam">LatinAmerica</option>            
                         
                         </select>
                     </div>
 
                 </div>
-                <div id="myCntrEmea" style="display: block">
+                <div id="myCntrEmea" style="display: none">
                     <div class="form-group alpaca-field alpaca-field-select alpaca-optional alpaca-create alpaca-top alpaca-field-valid" data-alpaca-field-id="alpaca1" data-alpaca-field-path="/" data-alpaca-field-name="">
 
                         <label class="control-label alpaca-control-label" for="alpaca1">What page would you like to edit?</label>
@@ -120,64 +120,137 @@
                 </div>
             </div>
             <div id="menu1" class="tab-pane fade">
+            <div style="padding-left: 15px;">
+            <h4>Please select region to upload content</h4>
+              <input type="radio" name='region' value='Canada' data-id="canada" style="margin-left: 15px;"/><span style="padding-left: 5px;">Canada</span><br/>
               
-                <form action="" method="post" enctype="multipart/form-data" name="frmeditSubmitFormEmea"
-                id="frmeditSubmitFormEmea">
-                <div>
-                    <br />
-                    <label for="myFileUploadEmea">
-                        You may use this form to upload pdf (Adobe Acrobat) , xls/xlsx (Microsoft Excel) or ppt/pptx (Microsoft Powerpoint)
-                        resources to your document library. Select the file by clicking on the 'Choose File'
-                        Button. Give the file a user friendly name. It should be lowercase with no spaces.
-                        Then click 'Submit' to upload your file to the library.
-                    </label>
-                    <br />
-                    <input type="file" id="myFileUploadEmea" accept="application/pdf,application/vnd.ms-excel"
-                        name="myFileUploadEmea">
-                    <br />
-                    <label>
-                        Give a name to your file (lowercase, no spaces ex: <span style="background-color: Yellow">
-                            my_new_file</span>).
+              <input type="radio" name='region' value='LatinAmerica' data-id="latam" style="margin-left: 15px;"/><span style="padding-left: 5px;">Latin America</span><br/>
+              </div>
+              <hr/>
+              <script>
+              $(':radio').change(function (event) {
+                    var id = $(this).data('id');                      
+                    var targetId = id + "_div";                    
+                    $("#canada_div").css('display','none');
+                    $("#latam_div").css('display','none');
+                    $("#"+targetId).css('display','block');
+                });</script>
+                <div id="canada_div" class="none choice" style="display: none">
+                    <form action="" method="post" enctype="multipart/form-data" name="frmeditSubmitFormEmea"
+                    id="frmeditSubmitFormEmea">
+                    <div>
                         <br />
-                        <input type="text" name="uploadFilename5" id="uploadFilenameEditEmea">
+                        <label for="myFileUploadEmea">
+                            You may use this form to upload pdf (Adobe Acrobat) , xls/xlsx (Microsoft Excel) or ppt/pptx (Microsoft Powerpoint)
+                            resources to your document library. Select the file by clicking on the 'Choose File'
+                            Button. Give the file a user friendly name. It should be lowercase with no spaces.
+                            Then click 'Submit' to upload your file to the library.
+                        </label>
                         <br />
+                        <input type="file" id="myFileUploadEmea" accept="application/pdf,application/vnd.ms-excel"
+                            name="myFileUploadEmea">
                         <br />
-                      
-                      
-                        <br>
-                    </label>
-                     <p id="p1" style="display:none">
-                              https://3abed68c-41f8-43a1-a7a0-f80ccbb1ded4-hosted.cloudcms.net/static/test.pdf?repository=5806d444c717deabe6fc&branch=956f6d1d79eef20c2b37&node=9f99c7dac34354d0d7a3&attachment=<span id="Span1"></span>
-                         </p>
-                </div>
-                <div>
-                    <input id="mySubmitButton" name="mySubmit" type="submit" value="Submit">
-                     <div id="cpy_element">
-                        <br/>
-                    <p><strong> To create a link to the file in the page editor click on copy and paste this customized link
-                    into the link field:</strong></p> 
-                        <textarea id="lnk" readonly></textarea><br/>
-                    <input type="button" onclick="copyToClipboard('#p1')" value="Copy Link" id="cpy">
+                        <label>
+                            Give a name to your file (lowercase, no spaces ex: <span style="background-color: Yellow">
+                                my_new_file</span>).
+                            <br />
+                            <input type="text" name="uploadFilename5" id="uploadFilenameEditEmea">
+                            <br />
+                            <br />
+                          
+                          
+                            <br>
+                        </label>
+                         <p id="p1" style="display:none">
+                                  https://3abed68c-41f8-43a1-a7a0-f80ccbb1ded4-hosted.cloudcms.net/static/test.pdf?repository=5806d444c717deabe6fc&branch=956f6d1d79eef20c2b37&node=9f99c7dac34354d0d7a3&attachment=<span id="Span1"></span>
+                             </p>
                     </div>
-                      <div><br/>
-                         <p><strong> To create a link to the file in the page editor click on copy and paste this customized link
-                        into the link field:</strong></p>
-                      <textarea id="lnk1" readonly></textarea><br/>
+                    <div>
+                        <input id="mySubmitButton" name="mySubmit" type="submit" value="Submit">
+                         <div id="cpy_element">
+                            <br/>
+                        <p><strong> To create a link to the file in the page editor click on copy and paste this customized link
+                        into the link field:</strong></p> 
+                            <textarea id="lnk" readonly></textarea><br/>
+                        <input type="button" onclick="copyToClipboard('#p1')" value="Copy Link" id="cpy">
+                        </div>
+                          <div><br/>
+                             <p><strong> To create a link to the file in the page editor click on copy and paste this customized link
+                            into the link field:</strong></p>
+                          <textarea id="lnk1" readonly></textarea><br/>
 
+                        </div>
+                        
                     </div>
-                    
-                </div>
-                     <input type="hidden" name="_dontcare">
-                </form>
-                <script>
-                    $("#frmeditSubmitFormEmea").submit(function (event) {
-                        alert('Resource Uploaded');
-                        event.preventDefault(); // Prevent the form from submitting via the browser.
-                        submitFormEmea();
-                    });
+                         <input type="hidden" name="_dontcare">
+                    </form>
+                    <script>
+                        $("#frmeditSubmitFormEmea").submit(function (event) {
+                            alert('Resource Uploaded');
+                            event.preventDefault(); // Prevent the form from submitting via the browser.
+                            submitFormEmea();
+                        });
 
-                </script>
-               
+                    </script>
+               </div>
+
+
+                <div id="latam_div" class="none choice" style="display: none">
+                    <form action="" method="post" enctype="multipart/form-data" name="frmeditSubmitFormLatam" id="frmeditSubmitFormLatam">
+                    <div>
+                        <br />
+                        <label for="myFileUploadEmea">
+                            You may use this form to upload pdf (Adobe Acrobat) , xls/xlsx (Microsoft Excel) or ppt/pptx (Microsoft Powerpoint)
+                            resources to your document library. Select the file by clicking on the 'Choose File'
+                            Button. Give the file a user friendly name. It should be lowercase with no spaces.
+                            Then click 'Submit' to upload your file to the library.
+                        </label>
+                        <br />
+                        <input type="file" id="myFileUploadLatam" accept="application/pdf,application/vnd.ms-excel" name="myFileUploadLatam">
+                        <br />
+                        <label>
+                            Give a name to your file (lowercase, no spaces ex: <span style="background-color: Yellow">
+                                my_new_file</span>).
+                            <br />
+                            <input type="text" name="uploadFilename5" id="uploadFilenameEditLatam">
+                            <br />
+                            <br />
+                          
+                          
+                            <br>
+                        </label>
+                         <p id="p1" style="display:none">
+                                  https://3abed68c-41f8-43a1-a7a0-f80ccbb1ded4-hosted.cloudcms.net/static/test.pdf?repository=5806d444c717deabe6fc&branch=956f6d1d79eef20c2b37&node=f81ca80ee19347464f12&attachment=<span id="Span1"></span> 
+                             </p>
+                    </div>
+                    <div>
+                        <input id="mySubmitButton" name="mySubmit" type="submit" value="Submit">
+                         <div id="cpy_element">
+                            <br/>
+                        <p><strong> To create a link to the file in the page editor click on copy and paste this customized link
+                        into the link field:</strong></p> 
+                            <textarea id="lnk" readonly></textarea><br/>
+                        <input type="button" onclick="copyToClipboard('#p1')" value="Copy Link" id="cpy">
+                        </div>
+                          <div><br/>
+                             <p><strong> To create a link to the file in the page editor click on copy and paste this customized link
+                            into the link field:</strong></p>
+                          <textarea id="lnk1" readonly></textarea><br/>
+
+                        </div>
+                        
+                    </div>
+                         <input type="hidden" name="_dontcare">
+                    </form>
+                    <script>
+                        $("#frmeditSubmitFormLatam").submit(function (event) {
+                            alert('Resource Uploaded');
+                            event.preventDefault(); // Prevent the form from submitting via the browser.
+                            submitFormLatam();
+                        });
+
+                    </script>
+               </div>
             </div>
         </div>
        
