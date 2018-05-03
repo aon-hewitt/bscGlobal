@@ -3087,6 +3087,7 @@ function logout()
 
         platform.logout();
         open("index.html", "_self");
+        
     }, 2000);
    
 }
