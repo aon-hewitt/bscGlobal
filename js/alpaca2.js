@@ -3060,7 +3060,7 @@ function setCredentialsFromLogin() {
         window.location ="canada.html"; // amy.gentile@bsci.com //na
     }else if(username=='lydia'){
         window.location ="pr.html"; //Lydia.GirauRodriguez@bsci.com //na
-    }else if(username=='ortizfh' || username == "martha.mulligan13@alight.com"){
+    }else if(username=='ortizfh'){
         window.location ="costarica.html"; //Hazel.OrtizFernandez@bsci.com //latam
     }else if(username=='myriam' || username == 'Lorraine'){
         window.location ="emeaIndex.html"; //Myriam.Brame@bsci.com
