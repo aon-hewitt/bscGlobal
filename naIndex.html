@@ -65,7 +65,10 @@
             console.log("Clickjacking test failed");
             top.location = self.location;
         }
-
+    /*var user = sessionStorage.getItem("user");
+      if(user != 'nathaniel'){
+        $("#master").attr('href','index.html');
+      }*/
     </script>
 </head>
 <body>
@@ -73,7 +76,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
-                    <a href="index.html"><img src="images/benefitsConnect.png" alt="Image" style="margin-top: 33px"></a>
+                    <a href="index.html" id="master"><img src="images/benefitsConnect.png" alt="Image" style="margin-top: 33px"></a>
                     <img src="images/bostonScientific.png" style="float: right; margin: 20px 50px" />
                 </div>
             </div>

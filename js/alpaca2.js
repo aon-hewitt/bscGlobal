@@ -3053,20 +3053,23 @@ function setCredentialsFromLogin() {
     username = $("#txtUsername").val();
     password = $("#txtPassword").val();
     getPage();
-     
+    
+    sessionStorage.setItem("user",username);
+
     if(username=='amygentile'){
         window.location ="canada.html"; // amy.gentile@bsci.com //na
     }else if(username=='lydia'){
         window.location ="pr.html"; //Lydia.GirauRodriguez@bsci.com //na
     }else if(username=='ortizfh' || username == "martha.mulligan13@alight.com"){
         window.location ="costarica.html"; //Hazel.OrtizFernandez@bsci.com //latam
-    }else if(username=='myriam'){
+    }else if(username=='myriam' || username == 'Lorraine'){
         window.location ="emeaIndex.html"; //Myriam.Brame@bsci.com
     }else if(username=='nathaniel'){
         window.location ="apacIndex.html"; //Nathaniel.Tan@bsci.com
     }else if(username=='poojasanghavi121'){
         window.location ="ireland.html"; //na
     } 
+
 }
 
 
