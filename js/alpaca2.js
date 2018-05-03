@@ -227,6 +227,8 @@ function getPage(callback) {
         console.log('called for palat')
         document.cookie = "username=" + username;
         document.cookie = "password=" + password;
+
+        sessionStorage.setItem("user",username);
          /* add country list based on username/password*/   
         
         this.readRepository(repositoryId).then(function() {
@@ -3054,7 +3056,7 @@ function setCredentialsFromLogin() {
     password = $("#txtPassword").val();
     getPage();
     
-    sessionStorage.setItem("user",username);
+
 
     if(username=='amygentile'){
         window.location ="canada.html"; // amy.gentile@bsci.com //na

@@ -65,11 +65,7 @@
             console.log("Clickjacking test failed");
             top.location = self.location;
         }
-    
-      var user = sessionStorage.getItem("user");
-      if(user != 'myriam' || user != 'Lorraine'){
-        $("#master").attr('href','index.html');
-      }
+        
     </script>
 </head>
 <body>
@@ -215,5 +211,14 @@
     <script src="js/alpaca2.js"></script>
     <script src="js/Class.create.js" type="text/javascript"></script>
     <script src="js/jquery-encoder-0.1.0.js" type="text/javascript"></script>
+    <script>
+    
+      var user = sessionStorage.getItem("user");
+ 
+      if((user != 'myriam') || (user != 'Lorraine')){
+        $("#master").attr('href','index.html');
+      } 
+
+      </script>
 </body>
 </html>
