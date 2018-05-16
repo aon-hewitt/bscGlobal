@@ -616,7 +616,7 @@ function loadNa(){
         $("#alpaca1").append('<option value="9c99425fefba93ab0cc7">Educational Assistance Program</option>');
         
         $("#alpaca1").append('<option value="cb228c1529fb8088eff0">Workflex, Vacaion and Holidays</option>');
-        $("#alpaca1").append('<option value="bf8975d87cee90707d3c">Voluntary Benefits</option>');
+        $("#alpaca1").append('<option value="c811620e743e4ad43bb1">Voluntary Benefits</option>');
         $("#alpaca1").append('<option value="c39675aa5b6e5cb772a2">Btfyl</option>');
         $("#alpaca1").append('<option value="1983821b05719f2cbf44">myResources</option>');
         $("#alpaca1").append('<option value="89c40f637b850ab783a0">New Hires</option>');
