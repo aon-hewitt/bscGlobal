@@ -595,7 +595,7 @@ function loadNa(){
 
         $("#alpaca1").html("");        
         $("#alpaca1").append('<option value="">None</option>');
-        $("#alpaca1").append('<option value="c6eaf39d47a8c99f5b11">Home</option>');
+        $("#alpaca1").append('<option value="eea8d114761b67c1accc">Home</option>');
         $("#alpaca1").append('<option value="bb69c5f8241454f1fc16">Medical</option>');
         $("#alpaca1").append('<option value="b9b37f1519a2ba283da7">Medical HMO</option>');
         $("#alpaca1").append('<option value="8df3d06afb89b80564a3">Medical PPO</option>');
@@ -617,7 +617,18 @@ function loadNa(){
         
         $("#alpaca1").append('<option value="cb228c1529fb8088eff0">Workflex, Vacaion and Holidays</option>');
         $("#alpaca1").append('<option value="c811620e743e4ad43bb1">Voluntary Benefits</option>');
-        $("#alpaca1").append('<option value="c39675aa5b6e5cb772a2">Btfyl</option>');
+        $("#alpaca1").append('<option value="4a02a5bf34fe627fb52f">Btfyl</option>');
+
+        $("#alpaca1").append('<option value="f34a73e72042dba52b6c">Grow my family</option>');
+        $("#alpaca1").append('<option value="7f6686d76d16f5f7a243">Care for an elderly</option>');
+        $("#alpaca1").append('<option value="fe3beb2c6efeae0cf06f">Building secure financial future</option>');
+        $("#alpaca1").append('<option value="5b461db2475944121aec">Focus on my health</option>');
+        $("#alpaca1").append('<option value="80db9e460c07a21f5fa9">Prepare retirement</option>');
+        $("#alpaca1").append('<option value="e6f1143338e10642f19d">Making life easier</option>');
+        $("#alpaca1").append('<option value="8dc771717af685c71692">Educational needs</option>');
+        $("#alpaca1").append('<option value="c69f29504096cceb35b5">Major life change</option>');
+        $("#alpaca1").append('<option value="cdbc9058e834ea9bf313">New hire benefits</option>');
+        
         $("#alpaca1").append('<option value="1983821b05719f2cbf44">myResources</option>');
         $("#alpaca1").append('<option value="89c40f637b850ab783a0">New Hires</option>');
         
@@ -2285,11 +2296,16 @@ function showFormNA() {
                     if((pageIdToLoad ==  "1983821b05719f2cbf44") || (pageIdToLoad == 'b77186da202d2ab9ba9e'))
                     {                       
                         showResourcesForm();
-                    }else if (pageIdToLoad == 'c6eaf39d47a8c99f5b11'){
-                        showHomepageForm('c6eaf39d47a8c99f5b11')
-                    }else if (pageIdToLoad == 'c39675aa5b6e5cb772a2'){
+                    }else if (pageIdToLoad == 'eea8d114761b67c1accc'){
+                        showHomepageForm('eea8d114761b67c1accc')
+                    }/*else if (pageIdToLoad == 'c39675aa5b6e5cb772a2'){
                         showMFForm(pageIdToLoad);
-                    } else{
+                    }*/
+                    else if(pageIdToLoad == '4a02a5bf34fe627fb52f'){ //btfyl page
+                        showBtfyl(pageIdToLoad);
+                    }else if((pageIdToLoad == "80db9e460c07a21f5fa9") || (pageIdToLoad == "7f6686d76d16f5f7a243") || (pageIdToLoad == "8dc771717af685c71692") || (pageIdToLoad == "5b461db2475944121aec") || (pageIdToLoad == "f34a73e72042dba52b6c") || (pageIdToLoad == "c69f29504096cceb35b5") || (pageIdToLoad == "e6f1143338e10642f19d") || (pageIdToLoad == "cdbc9058e834ea9bf313") || (pageIdToLoad == "fe3beb2c6efeae0cf06f") ){ //secondary btfyl pages
+                        showBtfylSecondary(pageIdToLoad);
+                    }else{
                         showPageMicro();
                     }
                 });
@@ -2467,9 +2483,54 @@ function showHomepageForm(pageIdToLoad) {
                     "title": "name",
                     "readonly": true 
                 },
-                "tile1": {
+                "header": {
                     "type": "string",
-                    "title": "tile1"
+                    "title": "header"
+                },
+                "headerUrl": {
+                    "type": "string",
+                    "title": "headerUrl"
+                },
+                "subHeader": {
+                    "type": "string",
+                    "title": "subHeader"
+                },
+                "banner": {
+                    "type": "array",
+                    "title": "Banners",
+                    "items": {
+                        "properties": {
+                            "bannerImage": {
+                                "type": "string",
+                                "title": "Banner Image"
+                            },
+                            "bannerHeader1": {
+                                "type": "string",
+                                "title": "Banner Header 1"
+                            },
+                            "bannerHeader2": {
+                                "type": "string",
+                                "title": "Banner Header2"
+                            },
+                            "bannerURL": {
+                                "type": "string",
+                                "title": "Banner Link"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "bodyHeader": {
+                    "type": "string",
+                    "title": "bodyHeader"
+                },
+                "body": {
+                    "type": "string",
+                    "title": "body"
+                },
+                "bodyImage": {
+                    "type": "string",
+                    "title": "bodyImage"
                 }
             },
             "_parent": "n:node",
@@ -2504,8 +2565,45 @@ function showHomepageForm(pageIdToLoad) {
                 "name": {
                     "type": "text"
                 },
-                "tile1": {
-                    "type": "ckeditor"
+                "body":{
+                    "type": "ckeditor",
+                     "ckeditor": {
+                        "toolbar": [
+                            ['Bold', 'Italic', 'Underline', 'Cut', 'Copy', 'Paste'], ['NumberedList', 'BulletedList', 'Link', 'Unlink'], ['Table', 'Source']
+                        ]
+                    },
+                    "height":"120"
+                },
+                "banner": {
+                    "type": "array",
+                    "items": {
+                        "fields": {
+                            "bannerImage": {
+                                "type": "text"
+                            },                          
+                            "bannerHeader1": {
+                                "type": "text"
+                            },
+                             "bannerHeader2": {
+                                "type": "text"
+                            },
+                            "bannerURL": {
+                                "type": "text"
+                            }
+                        }
+                    },
+                    "toolbarSticky": true,
+                    "actionbar": {
+                        "actions": [
+                            {
+                                "action": "add",
+                                "enabled": false
+                            },
+                            {
+                                "action": "remove",
+                                "enabled": false
+                            }]
+                    }
                 }
             }
         }
@@ -2732,6 +2830,452 @@ function showPageResources(pageIdToLoad) {
 
 } //alpaca 
 
+//new btfyl secondary page
+function showBtfylSecondary(pageIdToLoad){
+    
+    pageIdToLoad = $("#alpaca1").val();
+    $("#myform").html("");
+    $("#myform").css('display','block');
+    $("#myform").alpaca({
+        "view": "bootstrap-edit",
+        "data": node,
+        "schema": {
+            "title": "PageBtfylSecondary",
+            "description": "A data type to support for Page Btfyl Secondary.",
+            "type": "object",
+           "properties": {
+                "name": {
+                    "type": "string",
+                    "title": "name",
+                    "readonly":true
+                },
+                "heading": {
+                    "type": "string",
+                    "title": "heading"
+                },
+                "mainBody": {
+                    "type": "string",
+                    "title": "mainBody"
+                },
+                "mainContent": {
+                    "type": "array",
+                    "title": "mainContent",
+                    "items": {
+                        "properties": {
+                            "contentHeading": {
+                                "type": "string",
+                                "title": "contentHeading"
+                            },
+                            "contentBody": {
+                                "type": "string",
+                                "title": "contentBody"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "links": {
+                    "type": "array",
+                    "title": "Helpful Links",
+                    "maxItems": 30,
+                    "items": {
+                        "properties": {
+                            "linkHeader": {
+                                "type": "string",
+                                "title": "linkHeader"
+                            },
+                            "company": {
+                                "type": "string",
+                                "title": "company"
+                            },
+                            "number": {
+                                "type": "string",
+                                "title": "number"
+                            },
+                            "link": {
+                                "type": "string",
+                                "title": "link"
+                            }
+                        },
+                        "type": "object"
+                    }
+                }
+            },
+            "_parent": "n:node",
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "items": {}
+        },
+        "options": {
+            "form": {
+                "buttons": {
+                    "submit": {
+                        "click": function () {
+                            clearTimer();
+                            console.log("Timer Cleared");
+                            setTimer();
+                            console.log("Timer Set");
+
+                            var value = this.getValue();
+                            //alert(JSON.stringify(value, null, "  "));
+                            node.name = value.name;
+                           
+                            node.heading = value.heading;
+                            node.mainBody = value.mainBody;
+                            node.links = value.links;
+                            node.mainContent = value.mainContent;
+                           
+                            node.update().then(function () {
+                                alert("Form Submitted");
+                                window.location ="../index.html";
+                            });
+                        }
+                    }
+                }
+            },
+            "title": "newPageTitle",
+            "engineId": "alpaca1",
+            "fields": {
+                "name": {
+                    "type": "text"
+                },
+                "mainBody": {
+                    "type": "ckeditor",
+                     "ckeditor": {
+                        "toolbar": [
+                            ['Bold', 'Italic', 'Underline', 'Cut', 'Copy', 'Paste'], ['NumberedList', 'BulletedList', 'Link', 'Unlink'], ['Table', 'Source']
+                        ]
+                    },
+                    "height":"120"
+                },
+                 "mainContent": {
+                    "type": "array",
+                    "items": {
+                        "fields": {
+                            "contentHeading": {
+                                "type": "text"
+                            },                          
+                            "contentBody": {
+                                "type": "ckeditor",
+                                "ckeditor": {
+                                    "toolbar": [
+                                        ['Bold', 'Italic', 'Underline', 'Cut', 'Copy', 'Paste'], ['NumberedList', 'BulletedList', 'Link', 'Unlink'], ['Table', 'Source']
+                                    ]
+                                }
+                            }
+                        }
+                    },
+                    "toolbarSticky": true,
+                    "actionbar": {
+                        "actions": [
+                            {
+                                "action": "add",
+                                "enabled": false
+                            },
+                            {
+                                "action": "remove",
+                                "enabled": false
+                            }]
+                    }
+                },
+                "links": {
+                    "type": "array",
+                    "items": {
+                        "fields": {
+                            "linkHeader": {
+                                "type": "text"
+                            },                          
+                            "company": {
+                                "type": "text"
+                            },
+                             "number": {
+                                "type": "text"
+                            },
+                             "link": {
+                                "type": "text"
+                            }
+                        }
+                    },
+                    "toolbarSticky": true,
+                    "actionbar": {
+                        "actions": [
+                            {
+                                "action": "add",
+                                "enabled": false
+                            },
+                            {
+                                "action": "remove",
+                                "enabled": false
+                            }]
+                    }
+                } 
+
+            }
+        }
+    });
+
+}
+
+//new btfyl page
+function showBtfyl(pageIdToLoad){
+    pageIdToLoad = $("#alpaca1").val();
+    $("#myform").html("");
+    $("#myform").css('display','block');
+    $("#myform").alpaca({
+        "view": "bootstrap-edit",
+        "data": node,
+        "schema": {
+            "title": "PageBtfylSecondary",
+            "description": "A data type to support for Page Btfyl.",
+            "type": "object",
+            "properties": {
+                "name": {
+                    "type": "string",
+                    "title": "name",
+                    "readonly":true
+                },                
+                "body": {
+                    "type": "string",
+                    "title": "body"
+                },
+                "calloutHeader": {
+                    "type": "string",
+                    "title": "calloutHeader"
+                },
+                "calloutHeaderLink": {
+                    "type": "string",
+                    "title": "calloutHeaderLink"
+                },
+                "containerHeader": {
+                    "type": "string",
+                    "title": "containerHeader"
+                },
+                "row1Banner": {
+                    "type": "array",
+                    "title": "row1Banners",
+                    "items": {
+                        "properties": {
+                            "bannerHeader1": {
+                                "type": "string",
+                                "title": "Banner Header 1"
+                            },
+                            "bannerHeader2": {
+                                "type": "string",
+                                "title": "Banner Header2"
+                            },
+                            "bannerURL": {
+                                "type": "string",
+                                "title": "Banner Link"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "row2Banner": {
+                    "type": "array",
+                    "title": "row2Banners",
+                    "items": {
+                        "properties": {
+                            "bannerHeader1": {
+                                "type": "string",
+                                "title": "Banner Header 1"
+                            },
+                            "bannerHeader2": {
+                                "type": "string",
+                                "title": "Banner Header2"
+                            },
+                            "bannerURL": {
+                                "type": "string",
+                                "title": "Banner Link"
+                            }
+                        },
+                        "type": "object"
+                    }
+                },
+                "row3Banner": {
+                    "type": "array",
+                    "title": "row3Banners",
+                    "items": {
+                        "properties": {
+                            "bannerHeader1": {
+                                "type": "string",
+                                "title": "Banner Header 1"
+                            },
+                            "bannerHeader2": {
+                                "type": "string",
+                                "title": "Banner Header2"
+                            },
+                            "bannerURL": {
+                                "type": "string",
+                                "title": "Banner Link"
+                            }
+                        },
+                        "type": "object"
+                    }
+                }
+            },
+            "_parent": "n:node",
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "items": {}
+        },
+        "options": {
+            "form": {
+                "buttons": {
+                    "submit": {
+                        "click": function () {
+                            clearTimer();
+                            console.log("Timer Cleared");
+                            setTimer();
+                            console.log("Timer Set");
+
+                            var value = this.getValue();
+                            //alert(JSON.stringify(value, null, "  "));
+                            node.name = value.name;
+                           
+                            node.body = value.body;
+                            node.calloutHeader = value.calloutHeader;
+                            node.calloutHeaderLink = value.calloutHeaderLink;
+                            node.containerHeader = value.containerHeader;
+                            node.row1Banner =value.row1Banner;
+                            node.row2Banner =value.row2Banner;
+                            node.row3Banner =value.row3Banner;
+
+                            node.update().then(function () {
+                                alert("Form Submitted");
+                                window.location ="../index.html";
+                            });
+                        }
+                    }
+                }
+            },
+            "title": "newPageTitle",
+            "engineId": "alpaca1",
+            "fields": {
+                "name": {
+                    "type": "text"
+                },
+                "body": {
+                    "type": "ckeditor",
+                     "ckeditor": {
+                        "toolbar": [
+                            ['Bold', 'Italic', 'Underline', 'Cut', 'Copy', 'Paste'], ['NumberedList', 'BulletedList', 'Link', 'Unlink'], ['Table', 'Source']
+                        ]
+                    },
+                    "height":"120"
+                },
+                "calloutHeader":{
+                    "type": "text"                    
+                },
+                "calloutHeaderLink":{
+                    "type": "text"                    
+                },
+                "containerHeader":{
+                    "type": "text"                    
+                },
+                "row1Banner": {
+                    "type": "array",
+                    "items": {
+                        "fields": {
+                            "bannerHeader1": {
+                                "type": "text"
+                            },                          
+                            "bannerHeader2": {
+                                "type": "text"                               
+                            },
+                            "bannerURL":{
+                                "type": "text" 
+                            }
+                        }
+                    },
+                    "toolbarSticky": true,
+                    "actionbar": {
+                        "actions": [
+                            {
+                                "action": "add",
+                                "enabled": false
+                            },
+                            {
+                                "action": "remove",
+                                "enabled": false
+                            }]
+                    }
+                },
+                 "row2Banner": {
+                    "type": "array",
+                    "items": {
+                        "fields": {
+                            "bannerHeader1": {
+                                "type": "text"
+                            },                          
+                            "bannerHeader2": {
+                                "type": "text"                               
+                            },
+                            "bannerURL":{
+                                "type": "text" 
+                            }
+                        }
+                    },
+                    "toolbarSticky": true,
+                    "actionbar": {
+                        "actions": [
+                            {
+                                "action": "add",
+                                "enabled": false
+                            },
+                            {
+                                "action": "remove",
+                                "enabled": false
+                            },{
+                                "action": "up",
+                                "enabled": false
+                            },
+                            {
+                                "action": "down",
+                                "enabled": false
+                            }]
+                    }
+                },
+               "row3Banner": {
+                    "type": "array",
+                    "items": {
+                        "fields": {
+                            "bannerHeader1": {
+                                "type": "text"
+                            },                          
+                            "bannerHeader2": {
+                                "type": "text"                               
+                            },
+                            "bannerURL":{
+                                "type": "text" 
+                            }
+                        }
+                    },
+                    "toolbarSticky": true,
+                    "actionbar": {
+                        "actions": [
+                            {
+                                "action": "add",
+                                "enabled": false
+                            },
+                            {
+                                "action": "remove",
+                                "enabled": false
+                            },
+                            {
+                                "action": "up",
+                                "enabled": false
+                            },
+                            {
+                                "action": "down",
+                                "enabled": false
+                            }]
+                    }
+                },
+            }
+        }
+
+    });
+
+}
 
 //This function is ready to be implimented when we show modern family
 function showMFForm(pageIdToLoad) {
