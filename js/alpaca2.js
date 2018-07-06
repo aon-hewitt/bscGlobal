@@ -1,4 +1,4 @@
-﻿
+﻿ 
 var platform;
 var repository;
 var branch;
@@ -3610,7 +3610,7 @@ function setCredentialsFromLogin() {
         window.location ="costarica.html"; //Hazel.OrtizFernandez@bsci.com //latam
     }else if(username=='myriam' || username == 'Lorraine'){
         window.location ="emeaIndex.html"; //Myriam.Brame@bsci.com
-    }else if(username=='nathaniel'){
+    }else if(username=='tann'){
         window.location ="apacIndex.html"; //Nathaniel.Tan@bsci.com
     }else if(username=='poojasanghavi121'){
         window.location ="ireland.html"; //na
@@ -3758,8 +3758,14 @@ if($("#myFileUploadNa").val() != null){
             case 'pptm':
                 console.log('pptm file type allowed');
                 break;
+            case 'jpg':
+                console.log('jpg file type allowed');
+                break;
+            case 'jpeg':
+                console.log('jpeg file type allowed');
+                break;
             default:
-                alert('Pdf , ppt or xls/xlsx files may be uploaded');
+                alert('Pdf, ppt, xls/xlsx or jpg/jpeg files may be uploaded');
                 this.value = '';
         }
     };
