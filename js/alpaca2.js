@@ -2549,8 +2549,14 @@ function showHomepageForm(pageIdToLoad) {
 
                             var value = this.getValue();
                             //alert(JSON.stringify(value, null, "  "));
-                            node.name = value.name;                          
-                            node.tile1 = value.tile1;
+                            node.banner = value.banner;                          
+                            node.header = value.header;
+                            node.body = value.body;
+                            node.headerUrl = value.headerUrl;
+                            node.subHeader = value.subHeader;
+                            node.bodyHeader = value.bodyHeader;
+                            node.bodyImage = value.bodyImage;
+
                             node.update().then(function () {
                                 alert("Form Submitted");
                                 window.location ="../index.html";
