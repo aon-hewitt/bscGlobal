@@ -631,6 +631,12 @@ function loadNa(){
         
         $("#alpaca1").append('<option value="1983821b05719f2cbf44">myResources</option>');
         $("#alpaca1").append('<option value="89c40f637b850ab783a0">New Hires</option>');
+
+
+        $("#alpaca1").append('<option value="ff77942ac282b8e4e6e6">Whats Changing</option>');
+        $("#alpaca1").append('<option value="e353bddb571da63b5786">Consider HSA</option>');
+        $("#alpaca1").append('<option value="1d8f3261cbb464abb82e">Get Guidance</option>');
+        $("#alpaca1").append('<option value="4e9c211dcddaeb2f03d5">Compare Medical Plan Options</option>');
         
 
         $("#alpaca1").css('display','block');
