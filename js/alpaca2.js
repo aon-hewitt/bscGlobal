@@ -227,7 +227,8 @@ function getPage(callback) {
         console.log('called for palat')
         document.cookie = "username=" + username;
         document.cookie = "password=" + password;
-
+         var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
+         alert(authorizationHeader)
         sessionStorage.setItem("user",username);
          /* add country list based on username/password*/   
         
@@ -623,11 +624,12 @@ function loadNa(){
         $("#alpaca1").append('<option value="7f6686d76d16f5f7a243">Care for an elderly</option>');
         $("#alpaca1").append('<option value="fe3beb2c6efeae0cf06f">Building secure financial future</option>');
         $("#alpaca1").append('<option value="5b461db2475944121aec">Focus on my health</option>');
+        $("#alpaca1").append('<option value="6ccae92fe341ad20a010">Mental health resources</option>');
         $("#alpaca1").append('<option value="80db9e460c07a21f5fa9">Prepare retirement</option>');
         $("#alpaca1").append('<option value="e6f1143338e10642f19d">Making life easier</option>');
         $("#alpaca1").append('<option value="8dc771717af685c71692">Educational needs</option>');
         $("#alpaca1").append('<option value="c69f29504096cceb35b5">Major life change</option>');
-        $("#alpaca1").append('<option value="cdbc9058e834ea9bf313">New hire benefits</option>');
+        //$("#alpaca1").append('<option value="cdbc9058e834ea9bf313">New hire benefits</option>');
         
         $("#alpaca1").append('<option value="1983821b05719f2cbf44">myResources</option>');
         $("#alpaca1").append('<option value="89c40f637b850ab783a0">New Hires</option>');
