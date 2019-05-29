@@ -228,7 +228,7 @@ function getPage(callback) {
         document.cookie = "username=" + username;
         document.cookie = "password=" + password;
          var authorizationHeader = platform.getDriver().getHttpHeaders()["Authorization"];
-         alert(authorizationHeader)
+       //  alert(authorizationHeader)
         sessionStorage.setItem("user",username);
          /* add country list based on username/password*/   
         
@@ -3628,7 +3628,10 @@ function setCredentialsFromLogin() {
         window.location ="apacIndex.html"; //Nathaniel.Tan@bsci.com
     }else if(username=='poojasanghavi121'){
         window.location ="ireland.html"; //na
-    } 
+    }else if(username=='cynthia'){
+        window.location ="USIndex.html"; //usa
+    }
+
 
 }
 
