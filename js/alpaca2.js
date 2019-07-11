@@ -3622,7 +3622,7 @@ function setCredentialsFromLogin() {
         window.location ="pr.html"; //Lydia.GirauRodriguez@bsci.com //na
     }else if(username=='ortizfh'){
         window.location ="costarica.html"; //Hazel.OrtizFernandez@bsci.com //latam
-    }else if(username=='myriam' || username == 'Lorraine'){
+    }else if(username=='myriam' || username == 'Lorraine' || username== 'roisin'){
         window.location ="emeaIndex.html"; //Myriam.Brame@bsci.com
     }else if(username=='tann'){
         window.location ="apacIndex.html"; //Nathaniel.Tan@bsci.com
